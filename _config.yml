@@ -1,7 +1,7 @@
 title: Kyoung Whan Choe # your name (or website title) here
 logo: "/images/Kyoung_Whan_Choe.jpg?raw=true" # your photo (or logo) here
 description: > # your text below (remove <br> elements if you don't need line breaks)
-  <b>Decision Scientist</b><br>
+  <span style="font-size:12px"><b>Decision Scientist</b></span><br>
   Psychology Postdoctoral Scholar<br>
   Mansueto Institute for Urban Innovation<br>
   The University of Chicago
@@ -10,7 +10,8 @@ description: > # your text below (remove <br> elements if you don't need line br
   <p class="view"><a href="https://scholar.google.com/citations?user=Smql8gkAAAAJ&hl=en" target="_blank">Google Scholar profile</a></p>
   <p class="view"><a href="https://www.linkedin.com/in/kywch/" target="_blank">LinkedIn Profile</a></p>
   <p class="view"><a href="https://github.com/kywch/" target="_blank">GitHub Profile</a></p>
-  <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist" target="_blank">orderedlist</a></small></p>
+  <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist" target="_blank">orderedlist</a><br>
+  Page template forked from <a href="https://github.com/evanca/quick-portfolio">evanca</a></small></p>
   
 theme: jekyll-theme-minimal
 google_analytics: UA-102316-3 # your Google Analytics tracking ID here
