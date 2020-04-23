@@ -31,5 +31,7 @@
 
 
 ---
-<p style="font-size:11px">Page template forked from <a href="https://github.com/evanca/quick-portfolio">evanca</a></p>
-<!-- Remove above link if you don't want to attibute -->
+<p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist" target="_blank">orderedlist</a><br>
+Page template forked from <a href="https://github.com/evanca/quick-portfolio" target="_blank">evanca</a><br>
+Photo Credit: <a href="https://www.eriellebakkumphotography.com/" target="_blank">Erielle Bakkum</a>
+</small></p>
