@@ -1,4 +1,5 @@
 ## Research Highlights
+Kyoung is a cognitive neuroscientist, who uses simple games, brain imaging, eye-tracking, and machine learning to study how the internal and external environment affects human cognition. He currently investigates (1) neurocognitive mechanisms of math anxiety and math avoidance, (2) neurocognitive impacts of heat stress on aggressive behavior and decision-making, and (3) neurocognitive benefits of the superior pedestrian experience. 
 
 ---
 
@@ -8,6 +9,7 @@
 <img src="images/dummy_thumbnail.jpg?raw=true"/>
 * test
 * test
+
 ---
 [Project 2 Title](/pdf/sample_presentation.pdf)
 <img src="images/dummy_thumbnail.jpg?raw=true"/>
