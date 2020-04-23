@@ -32,4 +32,4 @@
 
 ---
 <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist" target="_blank">orderedlist</a>, 
- page template forked from <a href="https://github.com/evanca/quick-portfolio" target="_blank">evanca</a></small></p>
+ page template forked from <a href="https://github.com/evanca/quick-portfolio" target="_blank">evanca</a>.</small></p>
