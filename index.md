@@ -1,5 +1,18 @@
 ## Research Highlights
-My current research focuses on (1) neurocognitive mechanisms of math anxiety and math avoidance, (2) neurocognitive impacts of heat stress on aggressive behavior and decision-making, and (3) neurocognitive benefits of the superior pedestrian experience. 
+I use simple online games, brain imaging, eye-tracking, and machine learning to study how the internal and external environment affects human decision-making. I currently investigates (1) neurocognitive mechanisms of math anxiety and math avoidance, (2) neurocognitive benefits of the superior pedestrian experience, and (3) neurocognitive impacts of heat stress on aggressive behavior and decision-making.
+
+---
+
+### Web-based Cognitive Tasks
+These tasks were implemented using [the jsPsych library](https://www.jspsych.org/) and have been used (with Qualtrics) in my research. You can try these right now!
+* [The Choose-And-Solve Task](https://kywch.github.io/CAST_jsPsych/choose-and-solve-task.html)
+* [Multi-Image Rating Task](https://kywch.github.io/ImageRatingStudy/multi-rating.html)
+* [Retaliate or Carry-on: Reactive AGression Experiment (RC-RAGE)](https://kywch.github.io/RC-RAGE_jsPsych/)
+* [Stop-Signal Task (STOP-IT)](https://kywch.github.io/RC-RAGE_jsPsych/stop-signal.html)
+* [Bubble View Task](https://kywch.github.io/BubbleView_jsPsych/)
+* [Backward Digit Span Task (adaptive version)](https://kywch.github.io/WorkingMemoryTasks/backward-digit-span-adaptive.html)
+* [Dual N-Back Task](https://kywch.github.io/WorkingMemoryTasks/dual-nback.html)
+
 
 ---
 
