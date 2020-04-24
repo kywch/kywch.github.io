@@ -4,7 +4,7 @@ I use web-based cognitive tasks, brain imaging, eye-tracking, and machine learni
 ---
 
 ### Web-based Cognitive Tasks
-These tasks are based on [the jsPsych library](https://www.jspsych.org/) and have been used in my research (with Qualtrics). You can try these right now! NOTE: These tasks are NOT designed to work on mobile phones and tablets.
+These tasks are based on [the jsPsych library](https://www.jspsych.org/) and have been used in my research (with Qualtrics). You can try these right now! NOTE: These tasks are **NOT** designed to work on mobile phones and tablets.
 
 * [The Choose-And-Solve Task](https://kywch.github.io/CAST_jsPsych/choose-and-solve-task.html): An effort-based decision-making task for measuring math avoidance [(Choe et al., 2019, *Science Advances*)](https://advances.sciencemag.org/content/5/11/eaay1062). [\[code\]](https://github.com/kywch/CAST_jsPsych)
 * [Multi-Image Rating Task](https://kywch.github.io/ImageRatingStudy/multi-rating.html): An efficient method for rating images (work-in-progress) vs. [pairwise image rating](https://kywch.github.io/ImageRatingStudy/pair-rating.html). [\[code\]](https://github.com/kywch/ImageRatingStudy)
