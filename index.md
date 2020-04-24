@@ -4,8 +4,8 @@ I use simple online games, brain imaging, eye-tracking, and machine learning to 
 ---
 
 ### Web-based Cognitive Tasks
-These tasks were implemented using [the jsPsych library](https://www.jspsych.org/){target=_blank} and have been used (with Qualtrics) in my research. You can try these right now!
-* [The Choose-And-Solve Task](https://kywch.github.io/CAST_jsPsych/choose-and-solve-task.html)
+These tasks were implemented using [the jsPsych library](https://www.jspsych.org/) and have been used (with Qualtrics) in my research. You can try these right now!
+* <a href="https://kywch.github.io/CAST_jsPsych/choose-and-solve-task.html" target="_blank">The Choose-And-Solve Task</a>
 * [Multi-Image Rating Task](https://kywch.github.io/ImageRatingStudy/multi-rating.html)
 * [Retaliate or Carry-on: Reactive AGression Experiment (RC-RAGE)](https://kywch.github.io/RC-RAGE_jsPsych/)
 * [Stop-Signal Task (STOP-IT)](https://kywch.github.io/RC-RAGE_jsPsych/stop-signal.html)
