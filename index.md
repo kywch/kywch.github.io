@@ -10,7 +10,7 @@ These tasks are based on [the jsPsych library](https://www.jspsych.org/) and hav
 * [Multi-Image Rating Task](https://kywch.github.io/ImageRatingStudy/multi-rating.html): An efficient method for rating images (work-in-progress) vs. [pairwise image rating](https://kywch.github.io/ImageRatingStudy/pair-rating.html). [\[code\]](https://github.com/kywch/ImageRatingStudy)
 * [Retaliate or Carry-on: Reactive AGression Experiment (RC-RAGE)](https://kywch.github.io/RC-RAGE_jsPsych/): An ecologically-valid costly reactive aggression paradigm (work-in-progress). [\[code\]](https://github.com/kywch/RC-RAGE_jsPsych)
 * [Stop-Signal Task (STOP-IT)](https://kywch.github.io/RC-RAGE_jsPsych/stop-signal.html): Adapted the [original code]( https://github.com/fredvbrug/STOP-IT) by [Verbruggen and colleagues (2019)](https://elifesciences.org/articles/46323).
-* [Bubble View Task](https://kywch.github.io/BubbleView_jsPsych/): Adapted the [original code](https://github.com/namwkim/bubbleview) by [Kim and colleagues (2017)](http://bubbleview.namwkim.org/). [\[code\]](https://github.com/kywch/BubbleView_jsPsych)
+* [BubbleView Task](https://kywch.github.io/BubbleView_jsPsych/): Adapted the [original code](https://github.com/namwkim/bubbleview) by [Kim and colleagues (2017)](http://bubbleview.namwkim.org/). [\[code\]](https://github.com/kywch/BubbleView_jsPsych)
 * Working memory tasks: [Backward Digit Span Task](https://kywch.github.io/WorkingMemoryTasks/backward-digit-span-adaptive.html) and [Dual N-Back Task](https://kywch.github.io/WorkingMemoryTasks/dual-nback.html). [\[code\]](https://github.com/kywch/WorkingMemoryTasks)
 
 
