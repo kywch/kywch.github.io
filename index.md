@@ -6,7 +6,7 @@ I use web-based cognitive tasks, brain imaging, eye-tracking, and machine learni
 ### Web-based Cognitive Tasks
 These tasks were implemented using [the jsPsych library](https://www.jspsych.org/) and have been used (with Qualtrics) in my research. You can try these right now!
 
-* [The Choose-And-Solve Task](https://kywch.github.io/CAST_jsPsych/choose-and-solve-task.html): An effort-based decision-making task for measuring math avoidance [(Choe et al., 2019, Science Advances)](https://advances.sciencemag.org/content/5/11/eaay1062). [\[code\]](https://github.com/kywch/CAST_jsPsych)
+* [The Choose-And-Solve Task](https://kywch.github.io/CAST_jsPsych/choose-and-solve-task.html): An effort-based decision-making task for measuring math avoidance [(Choe et al., 2019, *Science Advances*)](https://advances.sciencemag.org/content/5/11/eaay1062). [\[code\]](https://github.com/kywch/CAST_jsPsych)
 * [Multi-Image Rating Task](https://kywch.github.io/ImageRatingStudy/multi-rating.html): An efficient method for rating images (work-in-progress) vs. [pairwise image rating](https://kywch.github.io/ImageRatingStudy/pair-rating.html). [\[code\]](https://github.com/kywch/ImageRatingStudy)
 * [Retaliate or Carry-on: Reactive AGression Experiment (RC-RAGE)](https://kywch.github.io/RC-RAGE_jsPsych/): An ecologically-valid costly reactive aggression paradigm (work-in-progress). [\[code\]](https://github.com/kywch/RC-RAGE_jsPsych)
 * [Stop-Signal Task (STOP-IT)](https://kywch.github.io/RC-RAGE_jsPsych/stop-signal.html): Adapted the [original code]( https://github.com/fredvbrug/STOP-IT) by [Verbruggen and colleagues (2019)](https://elifesciences.org/articles/46323).
