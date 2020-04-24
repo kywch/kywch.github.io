@@ -1,5 +1,5 @@
 ## Research Highlights
-I use web-based cognitive tasks, brain imaging, eye-tracking, and machine learning to study how the internal and external environment affects human decision-making. I currently study (1) neurocognitive mechanisms of math anxiety and math avoidance, (2) neurocognitive benefits of the superior pedestrian experience, and (3) neurocognitive impacts of heat stress on aggressive behavior and decision-making. During my PhD study, I investigated the role of human primary visual cortex in perceptual decision-making.
+I use web-based cognitive tasks, brain imaging, eye-tracking, and machine learning to study how the internal and external environment affects human decision-making. I currently study (1) neurocognitive mechanisms of math anxiety and math avoidance, (2) neurocognitive benefits of the superior pedestrian experience, and (3) neurocognitive impacts of heat stress on aggressive behavior and decision-making. During my PhD, I studied the role of human primary visual cortex in perceptual decision-making.
 
 ---
 
