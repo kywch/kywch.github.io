@@ -11,7 +11,7 @@ These tasks were implemented using [the jsPsych library](https://www.jspsych.org
 * [Retaliate or Carry-on: Reactive AGression Experiment (RC-RAGE)](https://kywch.github.io/RC-RAGE_jsPsych/): A more ecologically-valid costly reactive aggression paradigm. (work-in-progress) [(code)](https://github.com/kywch/RC-RAGE_jsPsych)
 * [Stop-Signal Task (STOP-IT)](https://kywch.github.io/RC-RAGE_jsPsych/stop-signal.html): Adapted the [original code]( https://github.com/fredvbrug/STOP-IT) by [Verbruggen and colleagues (2019)](https://elifesciences.org/articles/46323).
 * [Bubble View Task](https://kywch.github.io/BubbleView_jsPsych/): Adated the [original code](https://github.com/namwkim/bubbleview) by [Kim and colleagues (2017)](http://bubbleview.namwkim.org/). [(code)](https://github.com/kywch/BubbleView_jsPsych)
-* Working memory tasks: [Backward Digit Span Task (adaptive version)](https://kywch.github.io/WorkingMemoryTasks/backward-digit-span-adaptive.html), [Dual N-Back Task](https://kywch.github.io/WorkingMemoryTasks/dual-nback.html), [(code)](https://github.com/kywch/WorkingMemoryTasks)
+* Working memory tasks: [Backward Digit Span Task](https://kywch.github.io/WorkingMemoryTasks/backward-digit-span-adaptive.html), [Dual N-Back Task](https://kywch.github.io/WorkingMemoryTasks/dual-nback.html), [(code)](https://github.com/kywch/WorkingMemoryTasks)
 
 
 ---
