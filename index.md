@@ -18,9 +18,9 @@ These tasks are based on [the jsPsych library](https://www.jspsych.org/) and hav
 
 ### Math Anxiety & Avoidance Decision-Making
 The [Choose-And-Solve Task (CAST)](https://kywch.github.io/CAST_jsPsych) is a novel effort-based decision-making task in which participants chose between solving easy, low-reward problems and hard, high-reward problems in both math and nonmath contexts. Higher levels of math anxiety were associated with a tendency to select easier, low-reward problems over harder, high-reward math (but not word) problems. Addressing math avoidance behaviors can help break the vicious cycle of math anxiety and increase interest and success in STEM fields.
-<p align=center>
+<div align=center>
 <a href="https://kywch.github.io/CAST_jsPsych"><img src="images/Choose_And_Solve_Task.jpg?raw=true" style="max-width:450px"></a>
-</p>
+</div>
 * test
 * test
 
