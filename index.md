@@ -19,7 +19,7 @@ These tasks are based on [the jsPsych library](https://www.jspsych.org/) and hav
 ### Category Name 1
 
 [Project 1 Title](/sample_page)
-<img src="images/dummy_thumbnail.jpg?raw=true"/>
+<img src="images/Choose_And_Solve_Task.jpg?raw=true"/>
 * test
 * test
 
