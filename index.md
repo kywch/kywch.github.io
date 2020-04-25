@@ -25,7 +25,7 @@ Higher levels of math anxiety were associated with a tendency to select easier, 
 <br>
 
 * Paper: [**Calculated avoidance: Math anxiety predicts math avoidance in effort-based decision-making** (Choe et al., 2019, *Science Advances*)](https://advances.sciencemag.org/content/5/11/eaay1062). [\[demo\]](https://kywch.github.io/CAST_jsPsych/choose-and-solve-task.html) [\[code\]](https://github.com/kywch/CAST_jsPsych) [\[data\]](https://osf.io/t4wju/) [\[problem set\]](https://github.com/kywch/CAST_jsPsych/tree/master/problem-set)
-* Selected media: [@ScienceMagazine](https://twitter.com/sciencemagazine/status/1198707895585722368), [@ScienceAdvances](https://twitter.com/ScienceAdvances/status/1198345515810852864), [UChicago News](https://news.uchicago.edu/story/fear-math-can-outweigh-promise-higher-rewards), [Inverse.com](https://www.inverse.com/article/61092-math-anxiety-bad-decisions), [PERbites.org](https://perbites.org/2019/12/18/math-anxiety-and-math-avoidance/).
+* Selected media: [@ScienceMagazine](https://twitter.com/sciencemagazine/status/1198707895585722368), [@ScienceAdvances](https://twitter.com/ScienceAdvances/status/1198345515810852864), [UChicago News](https://news.uchicago.edu/story/fear-math-can-outweigh-promise-higher-rewards), [Inverse.com](https://www.inverse.com/article/61092-math-anxiety-bad-decisions), [PERbites.org](https://perbites.org/2019/12/18/math-anxiety-and-math-avoidance/), [BRIC 한빛사](https://www.ibric.org/myboard/read.php?id=189447&Board=tr_interview).
 
 
 ---
