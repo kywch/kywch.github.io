@@ -19,8 +19,8 @@ These tasks are based on [the jsPsych library](https://www.jspsych.org/) and hav
 ### Math Anxiety & Avoidance Decision-Making
 Math anxiety predicts how much effort people are willing to put into doing math. 
 The [Choose-And-Solve Task (CAST)](https://kywch.github.io/CAST_jsPsych) provides a reliable behavioral measure of math avoidance, which fills a major void in the math anxiety literature. The CAST can also facilitate the development of effective interventions to break the math anxiety-avoidance link. Addressing math avoidance behaviors can help break the vicious cycle of math anxiety and increase interest and success in STEM fields and is therefore an important topic for future research.
-<br>
-<img src="images/Choose_And_Solve_Task.jpg?raw=true" style="max-width:450px">
+<p>
+<a href="https://kywch.github.io/CAST_jsPsych"><img src="images/Choose_And_Solve_Task.jpg?raw=true" style="max-width:450px"></a>
 * test
 * test
 
