@@ -16,12 +16,12 @@ These tasks are based on [the jsPsych library](https://www.jspsych.org/) and hav
 
 ---
 
-### Category Name 1
+### Math Approach & Avoidance Decision-Making
 
-[Project 1 Title](/sample_page)
 <img src="images/Choose_And_Solve_Task.jpg?raw=true" style="max-width:450px">
 * test
 * test
+
 
 ---
 [Project 2 Title](/pdf/sample_presentation.pdf)
