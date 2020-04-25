@@ -24,7 +24,7 @@ Higher levels of math anxiety were associated with a tendency to select easier, 
 <a href="https://kywch.github.io/CAST_jsPsych"><img src="images/Choose_And_Solve_Task.jpg?raw=true" style="max-width:450px"></a>
 <br>
 
-* test
+* Paper: [**Calculated avoidance: Math anxiety predicts math avoidance in effort-based decision-making** (Choe et al., 2019, *Science Advances*)](https://advances.sciencemag.org/content/5/11/eaay1062)
 * test
 
 
