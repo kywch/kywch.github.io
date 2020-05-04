@@ -13,6 +13,7 @@ These tasks are based on [the jsPsych library](https://www.jspsych.org/) and hav
 * [BubbleView Task](https://kywch.github.io/BubbleView_jsPsych/): Adapted the [original code](https://github.com/namwkim/bubbleview) by [Kim and colleagues (2017)](http://bubbleview.namwkim.org/). <!-- [\[code\]](https://github.com/kywch/BubbleView_jsPsych) -->
 * Working memory tasks: [Backward Digit Span Task](https://kywch.github.io/WorkingMemoryTasks/backward-digit-span-adaptive.html) and [Dual N-Back Task](https://kywch.github.io/WorkingMemoryTasks/dual-nback.html). <!-- [\[code\]](https://github.com/kywch/WorkingMemoryTasks) -->
 
+**Have you wondered how to use jsPsych with Qualtrics?** Here is [the jsPsych in Qualtrics Tutorial Series](https://kywch.github.io/jsPsych-in-Qualtrics/)!
 
 ---
 
