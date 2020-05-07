@@ -11,6 +11,7 @@ These tasks are based on [the jsPsych library](https://www.jspsych.org/) and hav
 * [Retaliate or Carry-on: Reactive AGression Experiment (RC-RAGE)](https://kywch.github.io/RC-RAGE_jsPsych/): An improved costly-reactive-aggression paradigm (work-in-progress). <!-- [\[code\]](https://github.com/kywch/RC-RAGE_jsPsych) -->
 * [Stop-Signal Task (STOP-IT)](https://kywch.github.io/RC-RAGE_jsPsych/stop-signal.html): Adapted the [original code]( https://github.com/fredvbrug/STOP-IT) by [Verbruggen and colleagues (2019)](https://elifesciences.org/articles/46323).
 * [BubbleView Task](https://kywch.github.io/BubbleView_jsPsych/): Adapted the [original code](https://github.com/namwkim/bubbleview) by [Kim and colleagues (2017)](http://bubbleview.namwkim.org/). <!-- [\[code\]](https://github.com/kywch/BubbleView_jsPsych) -->
+* [Perceptual Metacognition Task](https://kywch.github.io/Perceptual-Metacognition/): Adapted the [original code](https://expfactory.github.io/v1/perceptual_metacognition.html) by [Sochat and colleagues (2016)](https://www.frontiersin.org/articles/10.3389/fpsyg.2016.00610/full).
 * Working memory tasks: [Backward Digit Span Task](https://kywch.github.io/WorkingMemoryTasks/backward-digit-span-adaptive.html) and [Dual N-Back Task](https://kywch.github.io/WorkingMemoryTasks/dual-nback.html). <!-- [\[code\]](https://github.com/kywch/WorkingMemoryTasks) -->
 
 **Have you wondered how to use jsPsych with Qualtrics?** Here is [the jsPsych in Qualtrics Tutorial Series](https://kywch.github.io/jsPsych-in-Qualtrics/)!
