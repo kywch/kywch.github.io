@@ -4,9 +4,12 @@ description: > # your text below (remove <br> elements if you don't need line br
   
   <span style="font-size:16px"><b>Cognitive Scientist</b></span><br>
   
-  <p class="view"><a href="https://scholar.google.com/citations?user=Smql8gkAAAAJ&hl=en" target="_blank">Google Scholar Profile</a></p>
-  <p class="view"><a href="https://www.linkedin.com/in/kywch/" target="_blank">LinkedIn Profile</a></p>
-  <p class="view"><a href="https://github.com/kywch/" target="_blank">GitHub Profile</a></p>
+  <p class="view">
+  <a href="https://www.linkedin.com/in/kywch/" target="_blank">LinkedIn</a>&nbsp;&nbsp; 
+  <a href="https://github.com/kywch/" target="_blank">GitHub</a><br>
+  <a href="https://scholar.google.com/citations?user=Smql8gkAAAAJ&hl=en" target="_blank">Google Scholar Profile</a>
+  </p>
+  
   <p><small>Photo Credit: <a href="https://www.eriellebakkumphotography.com/" target="_blank">Erielle Bakkum</a></small></p>
   
 theme: jekyll-theme-minimal
