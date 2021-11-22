@@ -1,5 +1,6 @@
-## Research Highlights
-I use web-based cognitive tasks, brain imaging, eye-tracking, and machine learning to study how the internal and external environment affects human decision-making. My current research focuses on (1) neurocognitive mechanisms of math anxiety and math avoidance, (2) neurocognitive benefits of the superior pedestrian experience, and (3) neurocognitive impacts of heat stress on self-control and aggression. During my PhD, I studied the role of human primary visual cortex in perceptual decision-making.
+Currently, **I work as a Learning/Data Scientist at [Enuma](https://enuma.com/)**, [a Co-Winner of the $15M Global Learning XPRIZE competition](https://www.xprize.org/prizes/global-learning/articles/global-learning-xprize-two-grand-prize-winners). At Enuma, I strive to increase K-2 children's motivation, engagement, and learning at scale using learning/data science and education technology. 
+
+During my PhD and postdoc, I used web-based cognitive tasks, brain imaging, eye-tracking, and machine learning to study human decision-making. For example, I developed a novel behavioral economics task, [The Choose-And-Solve Task](https://kywch.github.io/CAST_jsPsych/choose-and-solve-task.html), to show how some math-anxious individuals choose to avoid math and published my work in [*Science Advances* (Choe et al., 2019)](https://advances.sciencemag.org/content/5/11/eaay1062). 
 
 ---
 
