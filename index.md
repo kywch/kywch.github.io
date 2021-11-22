@@ -1,4 +1,4 @@
-Currently, **I work as a Learning/Data Scientist at [Enuma](https://enuma.com/)**, [a Co-Winner of the $15M Global Learning XPRIZE competition](https://www.xprize.org/prizes/global-learning/articles/global-learning-xprize-two-grand-prize-winners). 
+**I am a Learning/Data Scientist at [Enuma](https://enuma.com/)**, [a Co-Winner of the $15M Global Learning XPRIZE competition](https://www.xprize.org/prizes/global-learning/articles/global-learning-xprize-two-grand-prize-winners). 
 
 At Enuma, I strive to increase K-2 children's motivation, engagement, and learning at scale using learning/data science and education technology. 
 
