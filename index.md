@@ -2,14 +2,14 @@
 
 At Enuma, I strive to increase K-2 children's motivation, engagement, and learning at scale using learning/data science and education technology. 
 
-During my PhD and postdoc, I used web-based cognitive tasks, brain imaging, eye-tracking, and machine learning to study human decision-making. For example, I developed [The Choose-And-Solve Task](https://kywch.github.io/CAST_jsPsych/choose-and-solve-task.html) to show how some individuals with math anxiety choose to avoid math and published my work in [*Science Advances* (Choe et al., 2019)](https://advances.sciencemag.org/content/5/11/eaay1062). 
+During my PhD and postdoc, I used web-based cognitive tasks, brain imaging, eye-tracking, and machine learning to study human decision-making. For example, I developed [The Choose-And-Solve Task](https://kywch.github.io/CAST_jsPsych/choose-and-solve-task.html) to show how some individuals with math anxiety choose to avoid math and published my work in [*Science Advances* (Choe et al., 2019)](https://www.science.org/doi/10.1126/sciadv.aay1062). 
 
 ---
 
 ### Web-based Cognitive Tasks
 These tasks are based on [the jsPsych library](https://www.jspsych.org/) and have been used in my research with Qualtrics. You can try these right now! NOTE: These tasks are **NOT** designed to work on mobile phones and tablets.
 
-* [The Choose-And-Solve Task](https://kywch.github.io/CAST_jsPsych/choose-and-solve-task.html): An effort-based decision-making task for measuring math avoidance [(Choe et al., 2019, *Science Advances*)](https://advances.sciencemag.org/content/5/11/eaay1062). [\[demo\]](https://kywch.github.io/CAST_jsPsych/choose-and-solve-task.html) [\[code\]](https://github.com/kywch/CAST_jsPsych) [\[data\]](https://osf.io/t4wju/) [\[problem set\]](https://github.com/kywch/CAST_jsPsych/tree/master/problem-set)
+* [The Choose-And-Solve Task](https://kywch.github.io/CAST_jsPsych/choose-and-solve-task.html): An effort-based decision-making task for measuring math avoidance [(Choe et al., 2019, *Science Advances*)](https://www.science.org/doi/10.1126/sciadv.aay1062). [\[demo\]](https://kywch.github.io/CAST_jsPsych/choose-and-solve-task.html) [\[code\]](https://github.com/kywch/CAST_jsPsych) [\[data\]](https://osf.io/t4wju/) [\[problem set\]](https://github.com/kywch/CAST_jsPsych/tree/master/problem-set)
 * [Retaliate or Carry-on: Reactive AGression Experiment (RC-RAGE)](https://kywch.github.io/RC-RAGE_jsPsych/rc-rage-demo.html): An improved costly-reactive-aggression paradigm by [Meidenbauer, Choe, Bakkour, & Berman (2021)](https://psyarxiv.com/kw3by/). <!-- [\[code\]](https://github.com/kywch/RC-RAGE_jsPsych) -->
 * [Stop-Signal Task (STOP-IT)](https://kywch.github.io/STOP-IT/jsPsych_version/experiment-transformed-third.html): Adapted the [original code]( https://github.com/fredvbrug/STOP-IT) by [Verbruggen and colleagues (2019)](https://elifesciences.org/articles/46323).
 * [Multi-Image Rating Task](https://kywch.github.io/ImageRatingStudy/multi-image-rating-demo.html): An efficient method for rating images (work-in-progress) vs. [pairwise image rating](https://kywch.github.io/ImageRatingStudy/pairwise-rating-demo.html). <!-- [\[code\]](https://github.com/kywch/ImageRatingStudy) -->
@@ -23,13 +23,13 @@ These tasks are based on [the jsPsych library](https://www.jspsych.org/) and hav
 
 ### Math Anxiety & Avoidance Decision-Making
 The [Choose-And-Solve Task (CAST)](https://kywch.github.io/CAST_jsPsych) is a novel effort-based decision-making task in which participants chose between solving easy, low-reward problems and hard, high-reward problems in both math and nonmath contexts. 
-Higher levels of math anxiety were associated with a tendency to select easier, low-reward problems over harder, high-reward math (but not word) problems, suggesting that **we cannot even pay math-anxious people to do hard math.** Addressing math avoidance behaviors can help break the vicious cycle of math anxiety and increase interest and success in STEM fields. Please see [the paper (Choe et al., 2019, *Science Advances*)](https://advances.sciencemag.org/content/5/11/eaay1062).
+Higher levels of math anxiety were associated with a tendency to select easier, low-reward problems over harder, high-reward math (but not word) problems, suggesting that **we cannot even pay math-anxious people to do hard math.** Addressing math avoidance behaviors can help break the vicious cycle of math anxiety and increase interest and success in STEM fields. Please see [the paper (Choe et al., 2019, *Science Advances*)](https://www.science.org/doi/10.1126/sciadv.aay1062).
 <br>
 <br>
 <a href="https://kywch.github.io/CAST_jsPsych"><img src="images/Choose_And_Solve_Task.jpg?raw=true" style="max-width:450px"></a>
 <br>
 
-* Paper: [**Calculated avoidance: Math anxiety predicts math avoidance in effort-based decision-making** (Choe et al., 2019, *Science Advances*)](https://advances.sciencemag.org/content/5/11/eaay1062). [\[demo\]](https://kywch.github.io/CAST_jsPsych/choose-and-solve-task.html) [\[code\]](https://github.com/kywch/CAST_jsPsych) [\[data\]](https://osf.io/t4wju/) [\[problem set\]](https://github.com/kywch/CAST_jsPsych/tree/master/problem-set)
+* Paper: [**Calculated avoidance: Math anxiety predicts math avoidance in effort-based decision-making** (Choe et al., 2019, *Science Advances*)](https://www.science.org/doi/10.1126/sciadv.aay1062). [\[demo\]](https://kywch.github.io/CAST_jsPsych/choose-and-solve-task.html) [\[code\]](https://github.com/kywch/CAST_jsPsych) [\[data\]](https://osf.io/t4wju/) [\[problem set\]](https://github.com/kywch/CAST_jsPsych/tree/master/problem-set)
 * Selected media: [@ScienceMagazine](https://twitter.com/sciencemagazine/status/1198707895585722368), [@ScienceAdvances](https://twitter.com/ScienceAdvances/status/1198345515810852864), [UChicago News](https://news.uchicago.edu/story/fear-math-can-outweigh-promise-higher-rewards), [Inverse.com](https://www.inverse.com/article/61092-math-anxiety-bad-decisions), [PERbites.org](https://perbites.org/2019/12/18/math-anxiety-and-math-avoidance/), [한빛사 인터뷰](https://www.ibric.org/myboard/read.php?id=189447&Board=tr_interview).
 
 <!--
