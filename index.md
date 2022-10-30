@@ -4,7 +4,7 @@ As the first Data Scientist at [Enuma](https://enuma.com/), I established the da
 
 During my PhD and postdoc, I used web-based cognitive tasks, brain imaging, eye-tracking, and machine learning to study human decision-making. For example, I developed [The Choose-And-Solve Task](https://kywch.github.io/CAST_jsPsych/choose-and-solve-task.html) to show how some individuals with math anxiety choose to avoid math and published my work in [*Science Advances* (Choe et al., 2019)](https://www.science.org/doi/10.1126/sciadv.aay1062). 
 
-My other works include [reactive aggression (mturk)](https://psyarxiv.com/kw3by/), [urban scene perception (mturk)](https://www.tandfonline.com/doi/abs/10.1080/13574809.2022.2066512), [personality trait/task attentiveness (mturk/mouse)](https://onlinelibrary.wiley.com/doi/full/10.1111/jopy.12736), [image memorability (eye-tracking)](https://jov.arvojournals.org/article.aspx?articleid=2657481), [cognitive load (fNIRS)](https://www.sciencedirect.com/science/article/pii/S1053811921000720), and [visual categorization (fMRI)](https://www.jneurosci.org/content/jneuro/34/7/2725.full.pdf).
+My other works on cognition include [reactive aggression (mturk)](https://psyarxiv.com/kw3by/), [urban scene perception (mturk)](https://www.tandfonline.com/doi/abs/10.1080/13574809.2022.2066512), [personality trait/task attentiveness (mturk/mouse)](https://onlinelibrary.wiley.com/doi/full/10.1111/jopy.12736), [image memorability (eye-tracking)](https://jov.arvojournals.org/article.aspx?articleid=2657481), [cognitive load (fNIRS)](https://www.sciencedirect.com/science/article/pii/S1053811921000720), and [visual categorization (fMRI)](https://www.jneurosci.org/content/jneuro/34/7/2725.full.pdf).
 
 ---
 
