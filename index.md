@@ -1,6 +1,6 @@
 **Currently catching up with recent exciting advances in generative AI.**
 
-I was the first Data Scientist hire at [Enuma](https://enuma.com/), establishing the data team and processes, including data analyst onboarding, adhoc data analysis, tracking plan management (avo). I also defined metrics for user engagements & learning content usage and led/guided experimentation based on these metrics.
+As the first Data Scientist at [Enuma](https://enuma.com/), I established the data team/processes, *including data analyst onboarding, adhoc data analysis, tracking plan management (avo)*, defined metrics for user & content, and led/guided experimentation based on these metrics.
 
 During my PhD and postdoc, I used web-based cognitive tasks, brain imaging, eye-tracking, and machine learning to study human decision-making. For example, I developed [The Choose-And-Solve Task](https://kywch.github.io/CAST_jsPsych/choose-and-solve-task.html) to show how some individuals with math anxiety choose to avoid math and published my work in [*Science Advances* (Choe et al., 2019)](https://www.science.org/doi/10.1126/sciadv.aay1062). 
 
