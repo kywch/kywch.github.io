@@ -1,4 +1,4 @@
-**Currently catching up with recent exciting advances in generative AI.**
+**Currently catching up with recent exciting advances in AI.**
 
 As the first Data Scientist at [Enuma](https://enuma.com/), I established the data team/processes, *including data analyst onboarding, adhoc data analysis, tracking plan management (avo)*, defined user/content metrics, and led/guided experimentation based on these metrics.
 
