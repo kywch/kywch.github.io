@@ -1,4 +1,4 @@
-**Currently catching up with recent exciting advances in AI.**
+**Currently making it easy to create multiplayer game playing AIs**, like OpenAI Five or Alpha Star, democratizing multi-agent reinforcement learning research. Check out our [NeurIPS 2023 Neural MMO Challenge](https://neuralmmo.github.io/)
 
 As the first Data Scientist at [Enuma](https://enuma.com/), I established the data team/processes, *including data analyst onboarding, adhoc data analysis, tracking plan management (avo)*, defined user/content metrics, and led/guided experimentation based on these metrics.
 
