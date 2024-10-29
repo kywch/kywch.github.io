@@ -1,10 +1,14 @@
-**Currently making it easy to create multiplayer game playing AIs**, like OpenAI Five or Alpha Star, democratizing *multi-agent reinforcement learning* research. Check out our [NeurIPS 2023 Neural MMO Challenge](https://neuralmmo.github.io/) and [arxiv](https://arxiv.org/abs/2311.03736)!
+**Currently, I work in robotics, developing software to teach robots.** Many aspects of cognitive neuroscience training seem to transfer to robotics - designing (evaluation) tasks is similar, perception and action "networks" are comparable, and both involve extensive debugging.
 
-As the first Data Scientist at Enuma, I established the data team/processes, *including data analyst onboarding, adhoc data analysis, tracking plan management (avo)*, defined user/content metrics, and led/guided experimentation based on these metrics.
+During my PhD and postdoc, I used web-based cognitive tasks, brain imaging, eye-tracking, and machine learning to study human decision-making. For example, I developed [The Choose-And-Solve Task](https://kywch.github.io/CAST_jsPsych/choose-and-solve-task.html) to show how some individuals with math anxiety choose to avoid math and published my work in [*Science Advances* (Choe et al., 2019)](https://www.science.org/doi/10.1126/sciadv.aay1062). See my [Google Scholar](https://scholar.google.com/citations?user=Smql8gkAAAAJ&hl=en) page for other cognition works. 
 
-During my PhD and postdoc, I used web-based cognitive tasks, brain imaging, eye-tracking, and machine learning to study human decision-making. For example, I developed [The Choose-And-Solve Task](https://kywch.github.io/CAST_jsPsych/choose-and-solve-task.html) to show how some individuals with math anxiety choose to avoid math and published my work in [*Science Advances* (Choe et al., 2019)](https://www.science.org/doi/10.1126/sciadv.aay1062). 
+---
 
-My other works on cognition include [reactive aggression (mturk)](https://psyarxiv.com/kw3by/), [urban scene perception (mturk)](https://www.tandfonline.com/doi/abs/10.1080/13574809.2022.2066512), [personality trait/task attentiveness (mturk/ mouse)](https://onlinelibrary.wiley.com/doi/full/10.1111/jopy.12736), [image memorability (eye-tracking)](https://jov.arvojournals.org/article.aspx?articleid=2657481), [cognitive load (fNIRS)](https://www.sciencedirect.com/science/article/pii/S1053811921000720), and [visual categorization (fMRI)](https://www.jneurosci.org/content/jneuro/34/7/2725.full.pdf).
+### Open-source Projects
+
+* [Meta MMO](https://github.com/kywch/meta-mmo): Generalist policy training for Neural MMO games [arxiv](https://arxiv.org/pdf/2406.05071). Watch the agents play: [\[Team Battle\]](https://kywch.github.io/nmmo-client/?file=https://kywch.github.io/meta-mmo/full_teambattle_seed_11_20240530_162610.replay.lzma), [\[Race to the Center\]](https://kywch.github.io/nmmo-client/?file=https://kywch.github.io/meta-mmo/mini_racetocenter_seed_21_20240530_163538.replay.lzma), [\[King of the Hill\]](https://kywch.github.io/nmmo-client/?file=https://kywch.github.io/meta-mmo/mini_kingofthehill_seed_21_20240530_163207.replay.lzma), [\[Sandwich\]](https://kywch.github.io/nmmo-client/?file=https://kywch.github.io/meta-mmo/mini_sandwich_seed_21_20240530_163914.replay.lzma)
+* [NeurIPS 2023 Neural MMO Challenge](https://neuralmmo.github.io/_build/html/rst/landing.html#icon-2023-competition): As a core developer, created the RL baselines, optimized the game, and [presented at NeurIPS](https://nips.cc/virtual/2023/83943)
+* [Card Table](https://kywch.github.io/start-rl/): For my lit reviews, I want a whiteboard where I can move sticky notes around and write text here and there. So I made a React app, with much help from Claude. [\[code\]](https://github.com/kywch/card-table)
 
 ---
 
