@@ -1,0 +1,22 @@
+<div class="post-list">
+{% assign post_limit = include.limit | default: 5 %}
+{% for post in site.posts limit:post_limit %}
+  <article class="post-item">
+    <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+    <p class="post-meta">
+      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %d, %Y" }}</time>
+      {% if post.categories.size > 0 %}
+        • {{ post.categories | join: ", " }}
+      {% endif %}
+    </p>
+    {% if post.excerpt %}
+    <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+    {% endif %}
+    <a href="{{ post.url | relative_url }}" class="read-more">Read more →</a>
+  </article>
+{% endfor %}
+</div>
+
+{% if site.posts.size == 0 %}
+<p><em>No blog posts yet. Check back soon!</em></p>
+{% endif %}
