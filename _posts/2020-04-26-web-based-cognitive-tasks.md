@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Web-based Cognitive Tasks: Interactive jsPsych Experiments"
-date: 2019-01-01
+date: 2020-04-26
 categories: [research, cognitive-neuroscience]
 tags: [jspsych, web-experiments, cognitive-tasks, qualtrics]
 excerpt: "A collection of web-based cognitive tasks built with jsPsych for research. Try them yourself - from decision-making to working memory tasks!"

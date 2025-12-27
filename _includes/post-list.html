@@ -12,7 +12,6 @@
     {% if post.excerpt %}
     <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
     {% endif %}
-    <a href="{{ post.url | relative_url }}" class="read-more">Read more →</a>
   </article>
 {% endfor %}
 </div>

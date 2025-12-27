@@ -24,14 +24,26 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
     <style>
+      /* Prevent horizontal scroll */
+      html, body {
+        overflow-x: hidden;
+        max-width: 100%;
+      }
+
       /* Sidebar header only - not post headers */
-      .wrapper > header { width: 280px; }
-      body { padding: 40px; }
-      .wrapper { width: 830px; }
+      .wrapper > header {
+        width: 280px;
+        max-width: 100%;
+        box-sizing: border-box;
+      }
+      body { padding: 40px; box-sizing: border-box; }
+      .wrapper { width: 830px; max-width: 100%; box-sizing: border-box; }
 
       /* Override theme's section width for blog posts */
       section {
         width: 500px; /* Match theme default */
+        max-width: 100%;
+        box-sizing: border-box;
       }
 
       /* Ensure section doesn't overlap with fixed sidebar on desktop */
@@ -50,6 +62,26 @@
       @media print, screen and (max-width: 960px) {
         section {
           width: auto;
+        }
+
+        body {
+          padding: 10px; /* Further reduce padding on small screens */
+        }
+
+        .wrapper {
+          width: 100%; /* Full width on mobile */
+          box-sizing: border-box; /* Include padding in width calculation */
+        }
+
+        .wrapper > header {
+          width: auto; /* Allow header to expand on mobile */
+        }
+
+        footer {
+          text-align: center;
+          font-size: 0.8em;
+          word-wrap: break-word;
+          overflow-wrap: break-word;
         }
       }
 
@@ -173,7 +205,7 @@
 
       .project-title {
         margin: 0 0 0.5em 0;
-        font-size: 1.1em;
+        font-size: 1.2em;
         font-weight: 600;
         line-height: 1.3;
         overflow: hidden;
@@ -185,8 +217,8 @@
       .project-description {
         color: #586069;
         margin: 0.5em 0;
-        font-size: 0.85em;
-        line-height: 1.4;
+        font-size: 0.95em;
+        line-height: 1.5;
         flex: 1;
         overflow: hidden;
         display: -webkit-box;
@@ -207,7 +239,7 @@
         color: white !important;
         text-decoration: none;
         border-radius: 5px;
-        font-size: 0.85em;
+        font-size: 0.9em;
         font-weight: 500;
       }
 
@@ -367,13 +399,18 @@
   <body>
     <div class="wrapper">
       <header>
-        <h1><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
-        
-        {% if site.logo %}
-          <img src="{{site.logo | relative_url}}" alt="Logo" style="max-width:280px">
-        {% endif %}
+        <h1><a href="{{ "/" | absolute_url }}">Kyoung Whan Choe</a></h1>
 
-        <p>{{ site.description | default: site.github.project_tagline }}</p>
+        <img src="/images/Kyoung_Whan_Choe.jpg" alt="Kyoung Whan Choe" style="max-width:280px">
+
+        <p style="font-size:16px"><b>Research Engineer @<a href="https://www.rlwrld.ai/" target="_blank">RLWRLD</a></b> with Cognitive Neuroscience expertise</p>
+
+        <p class="view">
+          <a href="https://x.com/kywch500" target="_blank">𝕏</a>&nbsp;&nbsp;
+          <a href="https://github.com/kywch" target="_blank">GitHub</a>&nbsp;&nbsp;
+          <a href="https://scholar.google.com/citations?user=Smql8gkAAAAJ" target="_blank">Scholar</a>&nbsp;&nbsp;
+          <a href="https://linkedin.com/in/kywch" target="_blank">in</a>
+        </p>
 
       </header>
       

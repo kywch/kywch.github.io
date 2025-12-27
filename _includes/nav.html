@@ -1,0 +1,26 @@
+<nav class="top-nav">
+  <div class="nav-container">
+    <div class="nav-brand">
+      <a href="{{ "/" | relative_url }}">{{ site.title | default: "Kyoung Whan Choe" }}</a>
+    </div>
+
+    <button class="nav-toggle" aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <div class="nav-menu">
+      <a href="{{ "/" | relative_url }}" class="nav-link">Home</a>
+      <a href="{{ "/blog/" | relative_url }}" class="nav-link">Blog</a>
+      <a href="{{ "/projects/" | relative_url }}" class="nav-link">Projects</a>
+
+      <div class="nav-social">
+        <a href="https://x.com/kywch500" target="_blank" aria-label="X">𝕏</a>
+        <a href="https://github.com/kywch" target="_blank" aria-label="GitHub">GitHub</a>
+        <a href="https://scholar.google.com/citations?user=Smql8gkAAAAJ" target="_blank" aria-label="Google Scholar">Scholar</a>
+        <a href="https://linkedin.com/in/kywch" target="_blank" aria-label="LinkedIn">in</a>
+      </div>
+    </div>
+  </div>
+</nav>

@@ -20,12 +20,12 @@
         <div class="project-links">
           {% if project.url %}
           <a href="{{ project.url }}" class="project-link-btn" target="_blank" onclick="event.stopPropagation()">
-            {% if project.url_label %}{{ project.url_label }}{% else %}Visit{% endif %} →
+            {% if project.url_label %}{{ project.url_label }}{% else %}Visit{% endif %}
           </a>
           {% elsif project.blog_post %}
-          <a href="{{ project.blog_post }}" class="project-link-btn" onclick="event.stopPropagation()">Read More →</a>
+          <a href="{{ project.blog_post }}" class="project-link-btn" onclick="event.stopPropagation()">Read More</a>
           {% elsif project.github %}
-          <a href="{{ project.github }}" class="project-link-btn" target="_blank" onclick="event.stopPropagation()">View Code →</a>
+          <a href="{{ project.github }}" class="project-link-btn" target="_blank" onclick="event.stopPropagation()">View Code</a>
           {% endif %}
         </div>
       </div>
