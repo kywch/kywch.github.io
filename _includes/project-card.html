@@ -1,0 +1,53 @@
+<div class="project-grid">
+{% for project in include.projects %}
+  {% assign primary_url = project.url | default: project.blog_post | default: project.github %}
+
+  <div class="project-card" {% if primary_url %}data-href="{{ primary_url }}"{% endif %}>
+    <div class="project-card-inner">
+      {% if project.thumbnail %}
+      <div class="project-thumbnail">
+        <img src="{{ project.thumbnail | relative_url }}" alt="{{ project.title }}" onerror="this.parentElement.style.display='none'">
+      </div>
+      {% endif %}
+
+      <div class="project-body">
+        <h3 class="project-title">{{ project.title }}</h3>
+
+        {% if project.description %}
+        <p class="project-description">{{ project.description | truncatewords: 20 }}</p>
+        {% endif %}
+
+        <div class="project-links">
+          {% if project.url %}
+          <a href="{{ project.url }}" class="project-link-btn" target="_blank" onclick="event.stopPropagation()">
+            {% if project.url_label %}{{ project.url_label }}{% else %}Visit{% endif %}
+          </a>
+          {% elsif project.blog_post %}
+          <a href="{{ project.blog_post }}" class="project-link-btn" onclick="event.stopPropagation()">Read More</a>
+          {% elsif project.github %}
+          <a href="{{ project.github }}" class="project-link-btn" target="_blank" onclick="event.stopPropagation()">View Code</a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+{% endfor %}
+</div>
+
+<script>
+// Make cards clickable (desktop hover effect)
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.project-card[data-href]').forEach(function(card) {
+    card.style.cursor = 'pointer';
+    card.addEventListener('click', function(e) {
+      // Only trigger if not clicking on a link
+      if (!e.target.closest('a')) {
+        var url = this.getAttribute('data-href');
+        if (url) {
+          window.open(url, '_blank');
+        }
+      }
+    });
+  });
+});
+</script>

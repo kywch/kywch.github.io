@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title | default: "Kyoung Whan Choe" }}</title>
+
+    <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
+    <link rel="stylesheet" href="{{ "/assets/css/page-layout.css" | relative_url }}">
+    <style>
+      /* Reset theme styles for page layout */
+      body.page-layout {
+        padding: 0 !important;
+        margin: 0;
+      }
+
+      /* Hide theme's wrapper, header, section, footer */
+      .page-layout .wrapper,
+      .page-layout > header,
+      .page-layout > section,
+      .page-layout footer:not(.page-footer) {
+        display: none !important;
+      }
+
+      /* Ensure post content displays properly */
+      .page-layout article.post,
+      .page-layout .post-header,
+      .page-layout .post-content {
+        display: block !important;
+        float: none !important;
+        margin-left: 0 !important;
+        position: static !important;
+      }
+    </style>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D3RPWB8SEL"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-D3RPWB8SEL');
+    </script>
+  </head>
+
+  <body class="page-layout">
+    {% include nav.html %}
+
+    <main class="page-content">
+      <div class="content-wrapper">
+        {{ content }}
+      </div>
+    </main>
+
+    <footer class="page-footer">
+      <p><small>© 2019–{{ 'now' | date: "%Y" }} Kyoung Whan Choe</small></p>
+    </footer>
+
+    <script src="{{ "/assets/js/nav.js" | relative_url }}"></script>
+    <script src="{{ "/assets/js/blog.js" | relative_url }}"></script>
+  </body>
+</html>

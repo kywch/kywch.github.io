@@ -1,0 +1,31 @@
+---
+layout: page
+---
+<article class="post">
+  <header class="post-header">
+    <h1>{{ page.title }}</h1>
+    <p class="post-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>
+      {% if page.categories.size > 0 %}
+        • {{ page.categories | join: ", " }}
+      {% endif %}
+      {% if page.tags.size > 0 %}
+        • Tags: {{ page.tags | join: ", " }}
+      {% endif %}
+    </p>
+  </header>
+
+  <div class="post-content">
+    {{ content }}
+  </div>
+
+  <nav class="post-nav">
+    {% if page.previous.url %}
+    <div>• <a href="{{ page.previous.url }}">Previous: {{ page.previous.title }}</a></div>
+    {% endif %}
+    {% if page.next.url %}
+    <div>• <a href="{{ page.next.url }}">Next: {{ page.next.title }}</a></div>
+    {% endif %}
+    <div>• <a href="/blog/">Back to all posts</a></div>
+  </nav>
+</article>

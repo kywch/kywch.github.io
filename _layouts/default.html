@@ -24,9 +24,364 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
     <style>
-      header { width: 280px; }
-      body { padding: 40px; }
-      .wrapper { width: 830px; }
+      /* Prevent horizontal scroll */
+      html, body {
+        overflow-x: hidden;
+        max-width: 100%;
+      }
+
+      /* Sidebar header only - not post headers */
+      .wrapper > header {
+        width: 280px;
+        max-width: 100%;
+        box-sizing: border-box;
+      }
+      body { padding: 40px; box-sizing: border-box; }
+      .wrapper { width: 830px; max-width: 100%; box-sizing: border-box; }
+
+      /* Override theme's section width for blog posts */
+      section {
+        width: 500px; /* Match theme default */
+        max-width: 100%;
+        box-sizing: border-box;
+      }
+
+      /* Ensure section doesn't overlap with fixed sidebar on desktop */
+      @media print, screen and (min-width: 961px) {
+        section {
+          float: none; /* Remove float to prevent overlap */
+          margin-left: 310px; /* sidebar width (280px) + gap (30px) */
+        }
+
+        .wrapper {
+          width: auto;
+          max-width: 860px;
+        }
+      }
+
+      @media print, screen and (max-width: 960px) {
+        section {
+          width: auto;
+        }
+
+        body {
+          padding: 10px; /* Further reduce padding on small screens */
+        }
+
+        .wrapper {
+          width: 100%; /* Full width on mobile */
+          box-sizing: border-box; /* Include padding in width calculation */
+        }
+
+        .wrapper > header {
+          width: auto; /* Allow header to expand on mobile */
+        }
+
+        footer {
+          text-align: center;
+          font-size: 0.8em;
+          word-wrap: break-word;
+          overflow-wrap: break-word;
+        }
+      }
+
+      /* Blog post list styles */
+      .post-list {
+        margin: 2em 0;
+      }
+
+      .post-item {
+        margin-bottom: 2em;
+        padding-bottom: 1.5em;
+        border-bottom: 1px solid #e8e8e8;
+      }
+
+      .post-item:last-child {
+        border-bottom: none;
+      }
+
+      .post-item h3 {
+        margin: 0 0 0.5em 0;
+      }
+
+      .post-item h3 a {
+        color: #222;
+        text-decoration: none;
+      }
+
+      .post-item h3 a:hover {
+        color: #0366d6;
+        text-decoration: underline;
+      }
+
+      .post-meta {
+        color: #666;
+        font-size: 0.9em;
+        margin: 0.5em 0;
+      }
+
+      .post-excerpt {
+        margin: 0.5em 0;
+        color: #333;
+      }
+
+      .read-more {
+        color: #0366d6;
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      .read-more:hover {
+        text-decoration: underline;
+      }
+
+      /* Project card grid - 2 columns x 3 rows */
+      .project-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on desktop */
+        gap: 1.5em;
+        margin: 2em 0;
+      }
+
+      /* Mobile: 1 column */
+      @media screen and (max-width: 768px) {
+        .project-grid {
+          grid-template-columns: 1fr;
+          gap: 1em;
+        }
+      }
+
+      /* Square card container */
+      .project-card {
+        position: relative;
+        border: 1px solid #e8e8e8;
+        border-radius: 8px;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        background: white;
+        aspect-ratio: 1 / 1; /* Make it square */
+        display: flex;
+        flex-direction: column;
+      }
+
+      .project-card:hover {
+        box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        transform: translateY(-4px);
+      }
+
+      .project-card[data-href] {
+        cursor: pointer;
+      }
+
+      .project-card-inner {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+      }
+
+      /* Square thumbnail - 50% of card height */
+      .project-thumbnail {
+        width: 100%;
+        height: 50%;
+        overflow: hidden;
+        background: #f6f8fa;
+        flex-shrink: 0;
+      }
+
+      .project-thumbnail img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      /* Card body - 50% of card height */
+      .project-body {
+        padding: 1.2em;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        min-height: 0; /* Allow flex children to shrink */
+      }
+
+      .project-title {
+        margin: 0 0 0.5em 0;
+        font-size: 1.2em;
+        font-weight: 600;
+        line-height: 1.3;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 2; /* Limit to 2 lines */
+        -webkit-box-orient: vertical;
+      }
+
+      .project-description {
+        color: #586069;
+        margin: 0.5em 0;
+        font-size: 0.95em;
+        line-height: 1.5;
+        flex: 1;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 3; /* Limit to 3 lines */
+        -webkit-box-orient: vertical;
+      }
+
+      /* Single button at bottom */
+      .project-links {
+        margin-top: auto;
+        padding-top: 0.5em;
+      }
+
+      .project-link-btn {
+        display: inline-block;
+        padding: 0.5em 1em;
+        background: #0366d6;
+        color: white !important;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 0.9em;
+        font-weight: 500;
+      }
+
+      .project-link-btn:hover {
+        color: white !important;
+        background: #0366d6;
+      }
+
+      /* Mobile adjustments */
+      @media screen and (max-width: 768px) {
+        .project-card {
+          aspect-ratio: 4 / 3; /* Slightly wider on mobile */
+        }
+
+        .project-body {
+          padding: 1em;
+        }
+
+        .project-title {
+          font-size: 1em;
+        }
+
+        .project-description {
+          font-size: 0.8em;
+          -webkit-line-clamp: 2;
+        }
+      }
+
+      /* Individual post page */
+      article.post {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+      }
+
+      .post-header {
+        margin-bottom: 2em !important;
+        padding-bottom: 1em !important;
+        border-bottom: 2px solid #e8e8e8;
+        clear: both;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        position: relative;
+        z-index: 1;
+      }
+
+      .post-header h1 {
+        margin: 0 0 0.5em 0 !important;
+        line-height: 1.3 !important;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        max-width: 100%;
+        box-sizing: border-box;
+        position: relative;
+      }
+
+      .post-meta {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+      }
+
+      .post-content {
+        margin: 2em 0;
+        line-height: 1.7;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+      }
+
+      .post-content h2 {
+        margin-top: 1.5em;
+        margin-bottom: 0.5em;
+      }
+
+      .post-content img {
+        max-width: 100%;
+        height: auto;
+        margin: 1em 0;
+      }
+
+      .post-nav {
+        margin-top: 3em;
+        padding-top: 2em;
+        border-top: 1px solid #e8e8e8;
+      }
+
+      .post-nav-links {
+        display: flex;
+        justify-content: space-between;
+        gap: 1em;
+      }
+
+      .post-nav-prev,
+      .post-nav-next {
+        flex: 1;
+        color: #0366d6;
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      .post-nav-next {
+        text-align: right;
+      }
+
+      .post-nav a:hover {
+        text-decoration: underline;
+      }
+
+      .post-back {
+        margin-top: 1em;
+      }
+
+      .post-back a {
+        color: #586069;
+        text-decoration: none;
+      }
+
+      .post-back a:hover {
+        color: #0366d6;
+        text-decoration: underline;
+      }
+
+      /* Blog archive page */
+      .blog-archive-item {
+        margin-bottom: 2em;
+      }
+
+      .blog-archive-item h3 {
+        margin: 0 0 0.3em 0;
+      }
+
+      .blog-archive-item h3 a {
+        color: #222;
+        text-decoration: none;
+      }
+
+      .blog-archive-item h3 a:hover {
+        color: #0366d6;
+        text-decoration: underline;
+      }
     </style>
   </head>
   
@@ -44,13 +399,18 @@
   <body>
     <div class="wrapper">
       <header>
-        <h1><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
-        
-        {% if site.logo %}
-          <img src="{{site.logo | relative_url}}" alt="Logo" style="max-width:280px">
-        {% endif %}
+        <h1><a href="{{ "/" | absolute_url }}">Kyoung Whan Choe</a></h1>
 
-        <p>{{ site.description | default: site.github.project_tagline }}</p>
+        <img src="/images/Kyoung_Whan_Choe.jpg" alt="Kyoung Whan Choe" style="max-width:280px">
+
+        <p style="font-size:16px"><b>Research Engineer @<a href="https://www.rlwrld.ai/" target="_blank">RLWRLD</a></b> with Cognitive Neuroscience expertise</p>
+
+        <p class="view">
+          <a href="https://x.com/kywch500" target="_blank">𝕏</a>&nbsp;&nbsp;
+          <a href="https://github.com/kywch" target="_blank">GitHub</a>&nbsp;&nbsp;
+          <a href="https://scholar.google.com/citations?user=Smql8gkAAAAJ" target="_blank">Scholar</a>&nbsp;&nbsp;
+          <a href="https://linkedin.com/in/kywch" target="_blank">in</a>
+        </p>
 
       </header>
       

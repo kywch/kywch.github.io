@@ -1,17 +1,21 @@
-title: Kyoung Whan Choe # your name (or website title) here
-logo: "/images/Kyoung_Whan_Choe.jpg?raw=true" # your photo (or logo) here
-description: > # your text below (remove <br> elements if you don't need line breaks)
-  
-  <span style="font-size:16px"><b>Robot Learning Engineer</b> with Cognitive Neuroscience expertise</span>
-  
-  <p class="view">
-  <a href="https://x.com/kywch500" target="_blank">X.com</a>,&nbsp;
-  <a href="https://www.linkedin.com/in/kywch" target="_blank">LinkedIn</a>,&nbsp;
-  <a href="https://github.com/kywch" target="_blank">GitHub</a>,&nbsp;
-  <a href="https://scholar.google.com/citations?user=Smql8gkAAAAJ&hl=en" target="_blank">GoogleScholar</a>
-  </p>
-  
-  <p><small>Photo Credit: <a href="https://www.eriellebakkumphotography.com/" target="_blank">Erielle Bakkum</a></small></p>
-  
+title: Kyoung Whan Choe
 theme: jekyll-theme-minimal
 google_analytics: UA-102316-3 # your Google Analytics tracking ID here
+
+# Blog settings
+permalink: /blog/:year/:month/:title/
+excerpt_separator: "<!--more-->"
+
+# Note: All projects are now in _data/projects.yml
+
+# Exclude files/directories from processing
+exclude:
+  - tmp/
+  - logs/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/
+  - README.md
+  - PLAN.md
+  - AGENTS.md
