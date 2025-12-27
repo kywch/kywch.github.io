@@ -19,20 +19,13 @@ layout: page
     {{ content }}
   </div>
 
-  {% if page.previous.url or page.next.url %}
   <nav class="post-nav">
-    <div class="post-nav-links">
-      {% if page.previous.url %}
-        <a href="{{ page.previous.url }}" class="post-nav-prev">← {{ page.previous.title }}</a>
-      {% endif %}
-      {% if page.next.url %}
-        <a href="{{ page.next.url }}" class="post-nav-next">{{ page.next.title }} →</a>
-      {% endif %}
-    </div>
+    {% if page.previous.url %}
+    <div>• <a href="{{ page.previous.url }}">Previous: {{ page.previous.title }}</a></div>
+    {% endif %}
+    {% if page.next.url %}
+    <div>• <a href="{{ page.next.url }}">Next: {{ page.next.title }}</a></div>
+    {% endif %}
+    <div>• <a href="/blog/">Back to all posts</a></div>
   </nav>
-  {% endif %}
-
-  <div class="post-back">
-    <a href="/blog/">← Back to all posts</a>
-  </div>
 </article>

@@ -18,10 +18,20 @@
 
       /* Hide theme's wrapper, header, section, footer */
       .page-layout .wrapper,
-      .page-layout header,
-      .page-layout section,
+      .page-layout > header,
+      .page-layout > section,
       .page-layout footer:not(.page-footer) {
         display: none !important;
+      }
+
+      /* Ensure post content displays properly */
+      .page-layout article.post,
+      .page-layout .post-header,
+      .page-layout .post-content {
+        display: block !important;
+        float: none !important;
+        margin-left: 0 !important;
+        position: static !important;
       }
     </style>
 

@@ -4,12 +4,6 @@ title: Blog
 permalink: /blog/
 ---
 
-# Blog
-
-All my blog posts about robotics, machine learning, and research.
-
----
-
 {% assign postsByYear = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
 
 {% for year in postsByYear %}
