@@ -6,12 +6,6 @@ google_analytics: UA-102316-3 # your Google Analytics tracking ID here
 permalink: /blog/:year/:month/:title/
 excerpt_separator: "<!--more-->"
 
-# Pagination (optional - uncomment if you want paginated blog archive)
-# plugins:
-#   - jekyll-paginate
-# paginate: 5
-# paginate_path: /blog/page:num/
-
 # Note: All projects are now in _data/projects.yml
 
 # Exclude files/directories from processing

@@ -3,7 +3,7 @@
 **Website:** kywch.github.io
 **Owner:** Kyoung Whan Choe
 **Tech Stack:** Jekyll + GitHub Pages (jekyll-theme-minimal)
-**Last Updated:** 2025-12-26
+**Last Updated:** 2025-12-27
 
 ---
 
@@ -17,13 +17,16 @@ This file contains instructions for AI agents (Claude, GPT, etc.) to help mainta
 
 **Current Site Structure:**
 - **Portfolio/Landing Page:** `index.md`
-- **Blog Posts:** `_posts/YYYY-MM-DD-title.md`
-- **Blog Archive:** `blog.md`
-- **Layouts:** `_layouts/` (default.html, post.html)
-- **Components:** `_includes/` (post-list.html, project-card.html)
+- **Blog Posts:** `_posts/YYYY-MM-DD-title.md` (18 posts spanning 2019-2025)
+- **Blog Archive:** `blog.md` (with Load More functionality)
+- **Layouts:** `_layouts/` (default.html, page.html, post.html)
+- **Components:** `_includes/` (nav.html, post-list.html, project-card.html)
 - **Config:** `_config.yml`
-- **Images:** `images/` and `images/projects/`
-- **Agent Work Logs:** `logs/` (YYYY-MM-DD-agent-session.md)
+- **Styles:** `assets/css/page-layout.css`
+- **Scripts:** `assets/js/` (nav.js, blog.js)
+- **Images:** `images/`, `images/projects/`, `images/posts/`
+- **Data:** `_data/projects.yml`
+- **Agent Work Logs:** `logs/` (YYYY-MM-DD-description.md)
 
 **GitHub Pages Build:**
 - **Publishing Branch:** `master`
@@ -55,12 +58,18 @@ git push origin master
 ### 2. GitHub Pages Compatibility
 - ✅ **USE ONLY:** Standard Jekyll features and [whitelisted plugins](https://pages.github.com/versions/)
 - ❌ **NEVER USE:** Custom Ruby plugins, unsupported gems, Node.js build processes
-- ✅ **Whitelisted plugins:** jekyll-paginate, jekyll-seo-tag, jekyll-feed, jekyll-sitemap
+- ✅ **Whitelisted plugins:** jekyll-seo-tag, jekyll-feed, jekyll-sitemap
+- ⚠️ **jekyll-paginate:** Whitelisted BUT only works with root `index.html` (not subdirectories)
 - ❌ **Do NOT use:** jekyll-paginate-v2, custom Liquid filters, external build tools
+
+**Important Limitation:**
+- `jekyll-paginate` only paginates `/index.html` (site root)
+- Cannot paginate subdirectories like `/blog/`
+- For blog pagination, use client-side JavaScript (Load More) instead
 
 **Before adding ANY plugin:**
 1. Check https://pages.github.com/versions/
-2. Verify it's in the supported list
+2. Verify it's in the supported list AND works with your directory structure
 3. Document why it's needed
 
 ### 3. File Organization
@@ -86,6 +95,36 @@ git push origin master
 - When updating `index.md`, **preserve all sections** unless asked to remove them
 - Keep existing links, Google Analytics, social profiles intact
 - Maintain current design aesthetic (minimal, clean, professional)
+
+---
+
+## 🎨 Current Features
+
+### Blog System
+- ✅ **18 Blog Posts** spanning 2019-2025
+- ✅ **Year-grouped archive** page at `/blog/`
+- ✅ **Load More functionality** (shows 10 posts initially, button reveals more)
+- ✅ **Post navigation** (previous/next with bullets)
+- ✅ **Categories and tags** support
+- ✅ **Excerpt support** with `<!--more-->` separator
+
+### Layout System
+- ✅ **Top navigation bar** on blog/projects pages
+- ✅ **Sidebar layout** on home page
+- ✅ **Mobile hamburger menu** with JavaScript
+- ✅ **Active state highlighting** in navigation
+- ✅ **Full-width footer** across all pages
+
+### Projects
+- ✅ **6 Featured projects** in `_data/projects.yml`
+- ✅ **Card-based grid layout** (responsive)
+- ✅ **Dedicated projects page** at `/projects/`
+
+### Technical
+- ✅ **Client-side Load More** (no pagination plugin needed)
+- ✅ **SEO-friendly** (all posts in HTML)
+- ✅ **Progressive enhancement** (works without JavaScript)
+- ✅ **Mobile responsive** design throughout
 
 ---
 
@@ -308,7 +347,34 @@ excerpt_separator: "<!--more-->"
 
 ---
 
-### Task 8: Add RSS Feed
+### Task 8: Adjust Blog Load More Settings
+
+**When asked:** "Show more/fewer posts initially" or "change pagination"
+
+**Steps:**
+1. Edit `assets/js/blog.js`
+2. Change the `POSTS_PER_PAGE` constant:
+   ```javascript
+   const POSTS_PER_PAGE = 10;  // Change this number
+   ```
+3. Common values:
+   - `5` - Show fewer posts (more clicks needed)
+   - `10` - Current default (good balance)
+   - `15` - Show more posts initially
+   - `999` - Show all posts at once (disables Load More)
+
+**Notes:**
+- No server rebuild needed (client-side JavaScript)
+- Clear browser cache to see changes immediately
+- Current implementation shows first N posts, hides rest
+- Button reveals next N posts per click
+- All posts are in HTML (SEO-friendly)
+
+**Current Status:** 10 posts per page (18 total posts = 2 clicks to see all)
+
+---
+
+### Task 9: Add RSS Feed
 
 **When asked:** "Add RSS feed" or "enable subscriptions"
 
@@ -781,6 +847,12 @@ Use it as a reference for similar projects!
 
 ---
 
-**Last Updated:** 2025-12-26
+**Last Updated:** 2025-12-27
 **Maintained By:** AI Agents helping Kyoung Whan Choe
-**Questions?** Check PLAN.md, README.md, or ask the user!
+**Questions?** Check PLAN.md, README.md, or logs/ directory, or ask the user!
+
+**Recent Major Updates:**
+- 2025-12-27: Added Load More functionality for blog (client-side, 10 posts per page)
+- 2025-12-27: Documented jekyll-paginate limitations (root-only)
+- 2025-12-26: Added top navigation layout and 18 blog posts
+- 2025-12-26: Initial blog and projects system implementation

@@ -613,4 +613,341 @@ Future enhancements could include:
 
 ---
 
+## Phase 4: Navigation Polish (2025-12-27)
+
+**Date:** 2025-12-27
+**Status:** ✅ COMPLETED
+
+### Implementation Summary
+
+Polished the navigation system and blog layout by removing redundant headings, adding active states, tightening spacing, and improving post navigation.
+
+#### Files Modified (6 files)
+
+1. **`blog.md`** - Removed "# Blog" heading
+2. **`projects.md`** - Removed "# Projects" heading
+3. **`_includes/nav.html`** - Added active state classes to navigation links
+4. **`assets/css/page-layout.css`** - Added active state styling, reduced padding, added post styles, fixed footer width
+5. **`_layouts/post.html`** - Updated navigation format with bullets
+6. **`_layouts/page.html`** - Fixed post header display with better selectors
+
+#### Blog Posts Added (16 files + 2 images)
+
+**2023:**
+- Rejecting libraries letter
+- NeurIPS 2023 NMMO challenge
+- NeurIPS 2023 talk
+
+**2024:**
+- Meta MMO release
+- RL environment review criteria
+- Actuate 2024 reflections
+- Spatial intelligence
+- MG2HFBot
+- Luck, skill, and depth
+- Card table with Claude
+- Bring me beer
+
+**2025:**
+- Puffer PHC
+- RL maturity with PufferLib
+- Robot hands benchmark
+- Electric slide: China AI strategy
+- Fate of expertise in AI age
+
+**Images:**
+- `images/posts/2024-12-05-armpi.jpeg`
+- `images/posts/2025-07-01-hands.jpeg`
+
+### Key Features Implemented
+
+#### 1. Navigation Active State
+
+**Problem:** No visual feedback for current page in navigation.
+
+**Solution:**
+- Added Liquid conditionals to apply `active` class:
+  ```liquid
+  <a href="/blog/" class="nav-link {% if page.url contains "/blog" %}active{% endif %}">Blog</a>
+  ```
+- CSS styling for active state:
+  ```css
+  .nav-link.active {
+    color: #0366d6;
+    font-weight: 600;
+  }
+  ```
+
+**Result:** Current page highlighted in blue and bold on both desktop and mobile.
+
+#### 2. Removed Page Headings
+
+**Problem:** Redundant "# Blog" and "# Projects" headings when navigation already shows the page.
+
+**Solution:**
+- Removed `# Blog` from blog.md (line 7)
+- Removed `# Projects` from projects.md (line 7)
+- Kept descriptive text
+
+**Result:** Cleaner page headers, relies on navigation highlighting for context.
+
+#### 3. Reduced Spacing
+
+**Problem:** Too much gap between navigation bar and content (3rem desktop, 2rem mobile).
+
+**Solution:**
+- Desktop: `padding: 3rem 2rem 4rem` → `padding: 1.5rem 2rem 4rem`
+- Mobile: `padding: 2rem 1rem 3rem` → `padding: 1rem 1rem 3rem`
+
+**Result:** Tighter, more compact layout with better use of vertical space.
+
+#### 4. Updated Post Navigation
+
+**Problem:** Post navigation used arrows and inconsistent format.
+
+**Solution:**
+- Changed format to bullets: `• Previous:`, `• Next:`, `• Back to all posts`
+- Removed arrows (`←` and `→`)
+- Each link on separate line
+
+**Before:**
+```html
+<a href="...">← Previous Post Title</a>
+<a href="...">Next Post Title →</a>
+<a href="/blog/">← Back to all posts</a>
+```
+
+**After:**
+```html
+<div>• <a href="...">Previous: Previous Post Title</a></div>
+<div>• <a href="...">Next: Next Post Title</a></div>
+<div>• <a href="/blog/">Back to all posts</a></div>
+```
+
+**Result:** Clean, consistent navigation format.
+
+#### 5. Fixed Blog Post Header Display
+
+**Problem:** Post titles appearing on top of content in desktop view.
+
+**Root Cause:**
+- `page.html` was hiding ALL `header` elements including `<header class="post-header">`
+- Theme CSS applying float and margin-left to sections
+
+**Solution:**
+- Changed `.page-layout header` to `.page-layout > header` (only direct children)
+- Added explicit display rules for post elements:
+  ```css
+  .page-layout article.post,
+  .page-layout .post-header,
+  .page-layout .post-content {
+    display: block !important;
+    float: none !important;
+    margin-left: 0 !important;
+    position: static !important;
+  }
+  ```
+- Added post styles to page-layout.css with `!important` flags
+
+**Result:** Post headers display correctly on desktop without overlapping content.
+
+#### 6. Full-Width Footer
+
+**Problem:** Footer not spanning full browser width, appeared off-center.
+
+**Solution:**
+```css
+.page-footer {
+  width: 100vw;
+  max-width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  box-sizing: border-box;
+}
+
+.page-footer p,
+.page-footer small {
+  text-align: center;
+}
+```
+
+**Result:** Footer spans entire browser width with properly centered text.
+
+### Git Commits
+
+**Commit 1: Navigation and Layout Polish**
+```bash
+4a5132f Improve navigation and blog layout UX
+- Remove page headings from blog and projects pages
+- Add active state highlighting to navigation links
+- Reduce spacing between nav bar and content
+- Update blog post navigation with bullet points
+- Fix blog post header display on desktop
+- Make footer full-width and properly centered
+```
+
+**Commit 2: Blog Posts**
+```bash
+e081d4c Add blog posts and images
+Added 16 blog posts covering:
+- Research and publications (NeurIPS 2023, spatial intelligence)
+- Technical projects (Meta MMO, PufferLib, robot hands benchmark)
+- Engineering insights (RL environment criteria, bring-me-beer)
+- Industry analysis (China AI strategy, fate of expertise)
+- Game development (MG2HFBot, card table with Claude)
+```
+
+### Testing Results
+
+✅ **All Features Working:**
+- Navigation active state highlights correctly on all pages
+- Page headings removed, relies on navigation for context
+- Spacing reduced, tighter layout
+- Post navigation uses clean bullet format
+- Post headers display correctly on desktop and mobile
+- Footer spans full width and is centered
+- All 16 blog posts render correctly
+- Responsive design works on all screen sizes
+
+---
+
+## Phase 5: Blog Load More (2025-12-27)
+
+**Date:** 2025-12-27
+**Status:** ✅ COMPLETED
+
+### Implementation Summary
+
+Added client-side "Load More" functionality to blog archive page for better scalability.
+
+#### Investigation: Jekyll Pagination Limitations
+
+**Explored jekyll-paginate plugin:**
+- ❌ Only works with `index.html` in site **root directory**
+- ❌ Cannot paginate subdirectories like `/blog/`
+- ❌ `paginate_path` only controls URLs for pages 2+, page 1 MUST be `/index.html`
+- ❌ `jekyll-paginate-v2` not in GitHub Pages whitelist
+
+**Decision:** Implemented client-side Load More instead of server-side pagination.
+
+#### Files Created (1 file)
+
+1. **`assets/js/blog.js`** - Load More functionality with progressive reveal
+
+#### Files Modified (3 files)
+
+1. **`blog.md`** - Added post indexing (`data-post-index`), container divs, Load More button
+2. **`assets/css/page-layout.css`** - Added Load More button styles, removed old pagination styles (~117 lines removed)
+3. **`_layouts/page.html`** - Included blog.js script
+
+### How It Works
+
+**Architecture:**
+- All 18 posts sent in HTML (SEO-friendly, fast initial load)
+- JavaScript hides posts beyond initial 10
+- Button click reveals next 10 posts
+- No additional HTTP requests
+
+**User Experience:**
+1. **Page loads:** Shows 10 posts, button displays "Showing 10 of 18 posts"
+2. **Click "Load More":** Reveals next 10 (posts 11-18)
+3. **All visible:** Button disappears, shows "Showing all 18 posts"
+4. **Smooth scroll:** Auto-scrolls to newly revealed content
+
+**Technical:**
+```javascript
+const POSTS_PER_PAGE = 10;  // Easily adjustable
+```
+
+### Key Features Implemented
+
+- ✅ Shows 10 posts initially
+- ✅ "Load More" button reveals 10 more per click
+- ✅ Dynamic post counter (e.g., "Showing 10 of 18 posts")
+- ✅ Button auto-hides when all posts visible
+- ✅ Smooth scroll to newly revealed posts
+- ✅ Year sections auto-hide if no visible posts
+- ✅ Progressive enhancement (works without JavaScript)
+- ✅ Mobile responsive with full-width button
+- ✅ Maintains year grouping
+- ✅ Hover effects with subtle animation
+
+### CSS Highlights
+
+**Load More Button:**
+```css
+.load-more-btn {
+  padding: 0.75rem 2rem;
+  background: #0366d6;
+  color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: all 0.2s ease;
+}
+
+.load-more-btn:hover {
+  background: #0256c7;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+```
+
+**Mobile Responsive:**
+- Full-width button on mobile (max 300px)
+- Adjusted spacing for smaller screens
+
+### Cleanup
+
+**Removed old pagination code:**
+- Deleted ~117 lines of unused pagination CSS
+- Removed `.pagination`, `.pagination-container`, `.pagination-btn`, `.pagination-numbers` styles
+- Kept only Load More-specific styles
+
+### Testing Results
+
+✅ **All Features Working:**
+- All 18 posts load correctly in HTML
+- First 10 posts visible on page load
+- Load More button displays with accurate count
+- Click reveals remaining 8 posts (total 18 shown)
+- Button correctly disappears when all posts visible
+- Year grouping maintained throughout
+- Smooth scroll behavior works
+- Mobile responsive layout
+- Works with JavaScript disabled (shows all posts)
+- No console errors
+- Fast page load (all content in single request)
+
+### Why This Approach
+
+**Advantages:**
+1. **SEO-Friendly** - All posts in HTML, searchable by crawlers
+2. **Fast** - Single page load, no additional requests
+3. **Simple** - ~70 lines of JavaScript, easy to maintain
+4. **Scalable** - Works well for current scale (18 posts)
+5. **GitHub Pages Compatible** - No custom plugins needed
+6. **Progressive Enhancement** - Degrades gracefully without JS
+
+**Perfect for:**
+- Blogs with <50 posts
+- Static sites without server-side logic
+- GitHub Pages deployments
+- Fast, SEO-optimized content delivery
+
+### Future Scalability Options
+
+**If blog grows beyond 50 posts:**
+1. Increase `POSTS_PER_PAGE` to 15 or 20
+2. Implement true infinite scroll (auto-load on scroll)
+3. Use Jekyll Paginate V2 with GitHub Actions
+4. Create year-based archive pages
+5. Add client-side filtering by category/tag
+
+### Git Commit
+
+Ready for commit with all other changes from Phase 5.
+
+---
+
 **Implementation Complete!** 🚀
+
+**All Phases (1-5) Successfully Implemented**
