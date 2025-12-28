@@ -1,90 +1,122 @@
 # All projects - single source of truth
 # featured_order: 1-6 for landing page (3x2 grid), null/0 for non-featured
+#
+# Schema:
+# - blog_post: internal blog post URL (card click priority 1)
+# - site_url: external site URL like papers, docs (card click priority 2)
+# - github: GitHub repository URL (card click priority 3)
+# - demo_url: demo/game URL (button only, not card click)
+# - demo_label: button text (defaults to "Demo")
 
-- title: "MimicGen to LeRobot"
-  thumbnail: "/images/projects/mg2hfbot.jpg"
-  description: "Train LeRobot policies without a robot using MimicGen datasets. Converts datasets, trains ACT & diffusion policies, and evaluates on complex tasks."
-  github: "https://github.com/kywch/mg2hfbot"
-  featured_order: 1
+# When adding a new project, add it to the top.
 
-- title: "Meta MMO"
-  thumbnail: "/images/projects/meta-mmo.jpg"
-  description: "Generalist agent for Neural MMO games. Watch replays of team battle, race to center, king of the hill, and sandwich modes."
-  github: "https://github.com/kywch/meta-mmo"
-  url: "https://arxiv.org/pdf/2406.05071"
+- title: "Exercise buz2er"
+  thumbnail: "/images/projects/buz2er.png"
+  description: "Privacy-first exercise reminder app that just works"
+  blog_post: "/blog"
+  github: "https://github.com/kywch/buzzer"
+  demo_url: "https://buz2er.com/"
   featured_order: 2
 
-- title: "Neural MMO Challenge 2023"
-  thumbnail: "/images/projects/neuralmmo.jpg"
-  description: "NeurIPS 2023 competition. Created RL baselines, optimized the game engine, and presented at NeurIPS."
-  url: "https://neuralmmo.github.io"
-  github: "https://github.com/NeuralMMO/environment"
+- title: "Super 2048 Agent"
+  thumbnail: "/images/projects/2048_thumbnail.png"
+  description: "Running on your browser"
+  blog_post: "/blog"
+  github: "https://github.com/PufferAI/PufferLib"
+  demo_url: "/games/2048.html"
+  demo_label: "Play"
+  featured_order: 1
+
+- title: "Superhuman Tetris Agent"
+  thumbnail: "/images/projects/tetris_thumbnail.png"
+  description: "Not an LLM. Runs on your browser"
+  blog_post: "/blog"
+  github: "https://github.com/PufferAI/PufferLib"
+  demo_url: "/games/tetris.html"
+  demo_label: "Play"
+
+- title: "Puffer PHC"
+  thumbnail: "/images/projects/puffer_phc.gif"
+  description: "Simple and faster Perpetual Humanoid Control with Pufferlib"
+  blog_post: "/blog/2025/03/puffer-phc/"
+  github: "https://github.com/kywch/puffer-phc"
   featured_order: 3
 
-- title: "Card Table"
-  thumbnail: "/images/projects/card-table.jpg"
-  description: "Interactive whiteboard for literature reviews. Move sticky notes around and organize research papers visually."
-  github: "https://github.com/kywch/card-table"
-  url: "https://kywch.github.io/start-rl/"
+- title: "MimicGen to LeRobot"
+  thumbnail: "/images/projects/mg2hfbot.png"
+  description: "Train LeRobot policies without a robot using MimicGen datasets."
+  github: "https://github.com/kywch/mg2hfbot"
+
+- title: "Meta MMO"
+  thumbnail: "/images/projects/meta-mmo.png"
+  description: "Generalist agent for Neural MMO games. Team battle, race to center, king of the hill, and sandwich modes."
+  blog_post: "/blog/2024/06/meta-mmo-release/"
+  site_url: "https://arxiv.org/pdf/2406.05071"
+  github: "https://github.com/kywch/meta-mmo"
   featured_order: 4
 
+- title: "NeurIPS 23 Neural MMO Challenge"
+  thumbnail: "/images/projects/neuralmmo.png"
+  description: "Adapt and navigate unknown tasks and territories."
+  site_url: "https://neuralmmo.github.io"
+  github: "https://github.com/NeuralMMO/baselines"
+
+- title: "Card Table"
+  thumbnail: "/images/projects/card-table.png"
+  description: "Interactive whiteboard for literature reviews. Move sticky notes around and organize research papers visually."
+  github: "https://github.com/kywch/card-table"
+  demo_url: "https://kywch.github.io/start-rl/"
+
 - title: "Choose-And-Solve Task"
-  thumbnail: "/images/projects/cast.jpg"
-  description: "Effort-based decision-making task for measuring math avoidance. Published in Science Advances."
-  github: "https://github.com/kywch/CAST_jsPsych"
-  url: "https://kywch.github.io/CAST_jsPsych/choose-and-solve-task.html"
-  url_label: "Try Demo"
+  thumbnail: "/images/projects/cast.png"
+  description: "Effort decision-making task for measuring math avoidance. Published in Science Advances."
   blog_post: "/blog/2019/11/math-anxiety-avoidance/"
+  github: "https://github.com/kywch/CAST_jsPsych"
+  demo_url: "https://kywch.github.io/CAST_jsPsych/choose-and-solve-task.html"
   featured_order: 5
 
 - title: "jsPsych in Qualtrics"
-  thumbnail: "/images/projects/jspsych-qualtrics.jpg"
-  description: "Tutorial series for integrating jsPsych experiments with Qualtrics surveys."
+  thumbnail: "/images/projects/jspsych-qualtrics.png"
+  description: "Tutorials for using jsPsych experiments with Qualtrics surveys."
+  site_url: "https://kywch.github.io/jsPsych-in-Qualtrics/"
   github: "https://github.com/kywch/jsPsych-in-Qualtrics"
-  url: "https://kywch.github.io/jsPsych-in-Qualtrics/"
   featured_order: 6
 
-# Web-based Cognitive Tasks (not featured on landing page)
-
 - title: "RC-RAGE Task"
-  thumbnail: "/images/projects/rc-rage.jpg"
+  thumbnail: "/images/projects/rc-rage.png"
   description: "Retaliate or Carry-on: Reactive Aggression Experiment. An improved costly-reactive-aggression paradigm."
-  url: "https://kywch.github.io/RC-RAGE_jsPsych/rc-rage-demo.html"
-  url_label: "Try Demo"
+  site_url: https://link.springer.com/article/10.3758/s13428-023-02066-9
   github: "https://github.com/kywch/RC-RAGE_jsPsych"
+  demo_url: "https://kywch.github.io/RC-RAGE_jsPsych/rc-rage-demo.html"
 
 - title: "Stop-Signal Task (STOP-IT)"
   thumbnail: "/images/projects/stop-it.jpg"
   description: "Adapted STOP-IT task for measuring response inhibition. Based on Verbruggen et al. (2019)."
-  url: "https://kywch.github.io/STOP-IT/jsPsych_version/experiment-transformed-third.html"
-  url_label: "Try Demo"
+  site_url: "https://kywch.github.io/jsPsych-in-Qualtrics/stop-it/"
   github: "https://github.com/fredvbrug/STOP-IT"
+  demo_url: "https://kywch.github.io/STOP-IT/jsPsych_version/experiment-transformed-third.html"
 
 - title: "Multi-Image Rating Task"
-  thumbnail: "/images/projects/image-rating.jpg"
+  thumbnail: "/images/projects/image-rating.png"
   description: "Efficient method for rating images compared to traditional pairwise rating."
-  url: "https://kywch.github.io/ImageRatingStudy/multi-image-rating-demo.html"
-  url_label: "Try Demo"
+  site_url: "https://osf.io/preprints/psyarxiv/v3n5a_v1"
   github: "https://github.com/kywch/ImageRatingStudy"
+  demo_url: "https://kywch.github.io/ImageRatingStudy/multi-image-rating-demo.html"
 
 - title: "BubbleView Task"
-  thumbnail: "/images/projects/bubbleview.jpg"
+  thumbnail: "/images/projects/bubbleview.png"
   description: "Eye-tracking alternative using mouse interactions. Adapted from Kim et al. (2017)."
-  url: "https://kywch.github.io/BubbleView_jsPsych/"
-  url_label: "Try Demo"
+  site_url: "https://osf.io/preprints/psyarxiv/dxhz4_v1"
   github: "https://github.com/kywch/BubbleView_jsPsych"
+  demo_url: "https://kywch.github.io/BubbleView_jsPsych/"
 
 - title: "Perceptual Metacognition Task"
   thumbnail: "/images/projects/metacognition.jpg"
   description: "Task for measuring confidence judgments in perceptual decisions. Adapted from Sochat et al. (2016)."
-  url: "https://kywch.github.io/Perceptual-Metacognition/"
-  url_label: "Try Demo"
+  demo_url: "https://kywch.github.io/Perceptual-Metacognition/"
 
 - title: "Working Memory Tasks"
   thumbnail: "/images/projects/working-memory.jpg"
   description: "Backward Digit Span and Dual N-Back tasks for measuring working memory capacity."
-  url: "https://kywch.github.io/WorkingMemoryTasks/backward-digit-span-adaptive.html"
-  url_label: "Try Demo"
   github: "https://github.com/kywch/WorkingMemoryTasks"
-
-# Add more projects below - set featured_order to 1-6 to feature on landing page
+  demo_url: "https://kywch.github.io/WorkingMemoryTasks/backward-digit-span-adaptive.html"
