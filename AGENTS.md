@@ -116,15 +116,31 @@ git push origin master
 - ✅ **Full-width footer** across all pages
 
 ### Projects
-- ✅ **6 Featured projects** in `_data/projects.yml`
-- ✅ **Card-based grid layout** (responsive)
+- ✅ **Featured projects** in `_data/projects.yml` with schema:
+  - `blog_post` - Internal blog posts (card click priority 1)
+  - `site_url` - External sites/papers (card click priority 2)
+  - `github` - GitHub repos (card click priority 3)
+  - `demo_url` - Demo/game URL (button only, not card click)
+  - `demo_label` - Button text (defaults to "Demo")
+- ✅ **Card-based grid layout** (responsive, 2x3 on desktop)
 - ✅ **Dedicated projects page** at `/projects/`
+- ✅ **Separate project cards CSS** (`assets/css/project-cards.css`)
+
+### WASM Games (NEW - 2025-12-27)
+- ✅ **Interactive browser games** with trained AI agents
+- ✅ **2048 game** at `/games/2048.html` (~16.5MB assets)
+- ✅ **Tetris game** at `/games/tetris.html` (~4.2MB assets)
+- ✅ **Dual sidebar layout** (navigation + controls + credits)
+- ✅ **Human/AI control toggle** (Hold Shift for manual, release for AI)
+- ✅ **Auto-focus iframe** for immediate keyboard input
+- ✅ **Responsive zoom** (Tetris page scales to fit viewport)
 
 ### Technical
 - ✅ **Client-side Load More** (no pagination plugin needed)
 - ✅ **SEO-friendly** (all posts in HTML)
 - ✅ **Progressive enhancement** (works without JavaScript)
 - ✅ **Mobile responsive** design throughout
+- ✅ **WebAssembly games** (raylib + Emscripten compiled)
 
 ---
 
@@ -399,6 +415,67 @@ excerpt_separator: "<!--more-->"
 
 ---
 
+### Task 10: Add New WASM Game
+
+**When asked:** "Add another game" or "integrate new WebAssembly game"
+
+**Prerequisites:**
+- Game compiled to WASM with Emscripten (requires .wasm, .js, .data, .html files)
+- Thumbnail image (recommended: 400x400px or larger)
+- HTTP server for local testing (WASM won't work with `file://` protocol)
+
+**Steps:**
+
+1. **Prepare game files:**
+   ```bash
+   mkdir -p games/assets/game-name
+   cp source/* games/assets/game-name/
+   cp thumbnail.png images/projects/game-name_thumbnail.png
+   ```
+
+2. **Create game page** using template from `games/2048.html` or `games/tetris.html`:
+   - Update title, controls description, credits
+   - Adjust iframe width/height for game dimensions
+   - Add viewport zoom if needed (for tall games)
+   - Update navigation links to include new game
+
+3. **Update projects data** in `_data/projects.yml`:
+   ```yaml
+   - title: "Game Name"
+     thumbnail: "/images/projects/game-name_thumbnail.png"
+     description: "Brief engaging description"
+     demo_url: "/games/game-name.html"
+     demo_label: "Play"
+     github: "https://github.com/original/repo"
+     featured_order: X  # 1-6 for landing page, omit for projects page only
+   ```
+
+4. **Test locally** (WASM requires HTTP server):
+   ```bash
+   bundle exec jekyll serve --livereload
+   # Visit http://localhost:4000/games/game-name.html
+   ```
+
+5. **Verify checklist:**
+   - [ ] Game loads and is playable
+   - [ ] Keyboard controls work
+   - [ ] Auto-focus iframe enabled
+   - [ ] Navigation links updated
+   - [ ] Credits accurate
+   - [ ] No console errors
+
+**File size limits:**
+- Per file: <100MB (GitHub limit)
+- Keep total repo under 1GB
+- Current games: ~21MB total
+
+**Common issues:**
+- **Black screen:** Use HTTP server, not `file://`
+- **No keyboard input:** Check iframe auto-focus script
+- **Slow load:** Large .data files - consider compression
+
+---
+
 ## 🎨 Design Guidelines
 
 ### Visual Aesthetic
@@ -660,6 +737,29 @@ If multiple AI agents work on this site:
 
 **IMPORTANT:** After completing any work session, create a log file in the `logs/` directory.
 
+### Planning Workflow
+
+**For complex tasks requiring planning:**
+
+1. **Create planning document:** `logs/PLAN_AND_WIP.md`
+   - Use this file to draft implementation plans
+   - Document design decisions and options
+   - Get user approval before implementation
+
+2. **During implementation:** Update `logs/PLAN_AND_WIP.md` with progress
+   - Track completed phases
+   - Append any issues, changes, notes during implementation. Do NOT rewrite the plan.
+   - Keep it current as single source of truth
+
+3. **After completion:** Rename to dated log file
+   ```bash
+   mv logs/PLAN_AND_WIP.md logs/YYYY-MM-DD-brief-description.md
+   ```
+   - This preserves the complete history in logs/
+   - Makes room for the next planning session
+
+**For simple tasks:** Create log file directly (see below)
+
 ### Log File Format
 
 **Location:** `logs/YYYY-MM-DD-brief-description.md`
@@ -668,6 +768,7 @@ If multiple AI agents work on this site:
 - `logs/2025-12-26-initial-blog-setup.md`
 - `logs/2025-12-27-add-seo-features.md`
 - `logs/2026-01-15-update-featured-projects.md`
+- `logs/2025-12-27-add-wasm-games.md` (renamed from PLAN_AND_WIP.md)
 
 **Template:**
 ```markdown
@@ -852,6 +953,9 @@ Use it as a reference for similar projects!
 **Questions?** Check PLAN.md, README.md, or logs/ directory, or ask the user!
 
 **Recent Major Updates:**
+- 2025-12-27: Added interactive WASM games (2048, Tetris) with AI agents and dual sidebar layout
+- 2025-12-27: Refactored project card schema (blog_post, site_url, github, demo_url hierarchy)
+- 2025-12-27: Extracted project-cards.css and improved mobile UX
 - 2025-12-27: Added Load More functionality for blog (client-side, 10 posts per page)
 - 2025-12-27: Documented jekyll-paginate limitations (root-only)
 - 2025-12-26: Added top navigation layout and 18 blog posts
