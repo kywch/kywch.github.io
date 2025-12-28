@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetris Game - Kyoung Whan Choe</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            background: #0a0a0a;
+            color: #f1f1f1;
+            overflow-x: hidden;
+        }
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+        .left-panel {
+            width: 220px;
+            background: #111;
+            border-right: 1px solid #222;
+            padding: 1.5rem 1rem;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        .main-area {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .header {
+            padding: 1rem 1rem 0.5rem 1rem;
+            background: #0a0a0a;
+            text-align: center;
+        }
+        .header h1 {
+            color: #00bbbb;
+            font-size: 3rem;
+            margin: 0;
+        }
+        .game-wrapper {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 0.5rem 1rem 1rem 1rem;
+        }
+        iframe {
+            border: 2px solid #00bbbb;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 187, 187, 0.3);
+        }
+        .right-panel {
+            width: 220px;
+            background: #111;
+            border-left: 1px solid #222;
+            padding: 1.5rem 1rem;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        .panel-section {
+            margin-bottom: 2rem;
+        }
+        .panel-section h3 {
+            color: #00bbbb;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .panel-section p {
+            margin: 0 0 0.5rem 0;
+            opacity: 0.9;
+            font-size: 1.1rem;
+        }
+        .panel-section a {
+            color: #f1f1f1;
+            text-decoration: none;
+            display: block;
+            padding: 0.3rem 0;
+            transition: color 0.2s;
+        }
+        .panel-section a:hover {
+            color: #00bbbb;
+        }
+        .panel-section a.current {
+            color: #00bbbb;
+        }
+        .credits {
+            font-size: 0.95rem;
+            opacity: 0.7;
+            line-height: 1.5;
+        }
+        .credits p {
+            font-size: 0.95rem;
+        }
+        .credits a {
+            color: #00bbbb;
+            text-decoration: none;
+            display: inline;
+            padding: 0;
+        }
+        .control-item {
+            margin-bottom: 0.75rem;
+        }
+        .control-item strong {
+            color: #00bbbb;
+        }
+        .blog-link {
+            opacity: 0.7;
+            font-size: 1rem;
+        }
+        .blog-link.placeholder {
+            font-style: italic;
+        }
+
+        /* Scale down on screens that can't fit Tetris height */
+        @media screen and (max-height: 1100px) {
+            .main-area {
+                zoom: 0.85;
+            }
+        }
+
+        @media screen and (max-height: 950px) {
+            .main-area {
+                zoom: 0.75;
+            }
+        }
+
+        @media screen and (max-height: 850px) {
+            .main-area {
+                zoom: 0.65;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-panel">
+            <div class="panel-section" style="margin-bottom: 1.5rem;">
+                <a href="/">Home</a>
+                <a href="/projects/">Projects</a>
+            </div>
+
+            <div class="panel-section">
+                <h3>Games</h3>
+                <a href="2048.html">2048</a>
+                <a href="tetris.html" class="current">Tetris</a>
+            </div>
+
+            <div class="panel-section credits">
+                <h3>Credits</h3>
+                <p>Original: Hadrien Crassous · <a href="https://github.com/PufferAI/PufferLib" target="_blank">PufferLib</a></p>
+                <p>Enhanced & AI: <a href="/">Kyoung Whan Choe</a> · <a href="#" class="placeholder">Blog →</a></p>
+            </div>
+        </div>
+
+        <div class="main-area">
+            <div class="header">
+                <h1>Tetris</h1>
+            </div>
+            <div class="game-wrapper">
+                <iframe
+                    id="gameFrame"
+                    src="assets/tetris/game.html"
+                    width="384"
+                    height="928"
+                    title="Tetris Game"
+                    frameborder="0">
+                </iframe>
+            </div>
+        </div>
+
+        <div class="right-panel">
+            <div class="panel-section">
+                <h3>Controls</h3>
+                <div class="control-item">
+                    <strong>Left Shift:</strong><br>
+                    Hold for human control
+                </div>
+                <div class="control-item">
+                    <strong>A/D</strong> or <strong>←/→:</strong><br>
+                    Move left/right
+                </div>
+                <div class="control-item">
+                    <strong>W</strong> or <strong>↑:</strong><br>
+                    Rotate
+                </div>
+                <div class="control-item">
+                    <strong>S</strong> or <strong>↓:</strong><br>
+                    Soft drop
+                </div>
+                <div class="control-item">
+                    <strong>Space:</strong><br>
+                    Hard drop
+                </div>
+                <div class="control-item">
+                    <strong>C:</strong><br>
+                    Stash piece
+                </div>
+                <p style="opacity: 0.7; font-size: 0.85rem; margin-top: 1rem;">
+                    Release Shift to watch trained agents play!
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        // Auto-focus the iframe when page loads
+        window.addEventListener('load', function() {
+            const iframe = document.getElementById('gameFrame');
+            iframe.focus();
+
+            // Also refocus when clicking anywhere on the page
+            document.addEventListener('click', function() {
+                iframe.focus();
+            });
+        });
+    </script>
+</body>
+</html>
