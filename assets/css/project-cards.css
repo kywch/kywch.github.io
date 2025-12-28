@@ -1,0 +1,145 @@
+/* Project card grid - 2 columns x 3 rows */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns on desktop */
+  gap: 1.5em;
+  margin: 2em 0;
+}
+
+/* Mobile: 1 column */
+@media screen and (max-width: 768px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+    gap: 1em;
+  }
+}
+
+/* Square card container */
+.project-card {
+  position: relative;
+  border: 1px solid #e8e8e8;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  background: white;
+  aspect-ratio: 1 / 1.1; /* Make it square */
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card:hover {
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  transform: translateY(-4px);
+}
+
+.project-card[data-href] {
+  cursor: pointer;
+}
+
+.project-card-inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Square thumbnail - 40% of card height */
+.project-thumbnail {
+  width: 100%;
+  height: 40%;
+  overflow: hidden;
+  background: #f6f8fa;
+  flex-shrink: 0;
+}
+
+.project-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+}
+
+/* Card body - 60% of card height */
+.project-body {
+  padding: 1.2em 1.2em;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0; /* Allow flex children to shrink */
+}
+
+.project-title {
+  margin: 0 0 0.5em 0;
+  font-size: 1.2em;
+  font-weight: 600;
+  line-height: 1.3;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Limit to 2 lines */
+  -webkit-box-orient: vertical;
+}
+
+.project-description {
+  color: #586069;
+  margin: 0.5em 0;
+  font-size: 0.95em;
+  line-height: 1.5;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  max-height: 3em; /* ~2 lines at line-height 1.5 */
+}
+
+/* Single button at bottom */
+.project-links {
+  margin-top: auto;
+  padding-top: 0.5em;
+}
+
+.project-link-btn {
+  display: inline-block;
+  padding: 0.5em 1em;
+  background: #0366d6;
+  color: white !important;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 0.9em;
+  font-weight: 500;
+}
+
+.project-link-btn:hover {
+  color: white !important;
+  background: #0366d6;
+}
+
+/* Mobile adjustments */
+@media screen and (max-width: 768px) {
+  .project-card {
+    aspect-ratio: 3 / 2; /* Wider card on mobile for better readability */
+  }
+
+  .project-thumbnail {
+    height: 50%; /* Increase thumbnail to 50% of card height */
+  }
+
+  .project-body {
+    padding: 1em;
+  }
+
+  .project-title {
+    font-size: 1.3em;
+  }
+
+  .project-description {
+    font-size: 1em;
+    -webkit-line-clamp: 3; /* Allow 3 lines since we have more space */
+    line-clamp: 3;
+  }
+
+  /* Hide button on mobile - entire card is clickable */
+  .project-link-btn {
+    display: none;
+  }
+}

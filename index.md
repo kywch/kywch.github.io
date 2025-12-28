@@ -2,7 +2,7 @@
 layout: default
 ---
 
-**Currently, I work in robotics, developing software to teach robots.** Many aspects of cognitive neuroscience training seem to transfer to robotics - designing evaluation tasks is similar, perception and action "networks" are comparable, and both involve extensive debugging.
+**I work in robotics, developing software to teach robots.** I also train gaming agents as a hobby, where the principles are similar and iteration is much faster. Many aspects of cognitive neuroscience training seem to transfer - designing evaluation tasks is similar, perception and action "networks" are comparable, and both involve extensive debugging.
 
 During my PhD and postdoc, I used web-based cognitive tasks, brain imaging, eye-tracking, and machine learning to study human decision-making. For example, I developed [The Choose-And-Solve Task](https://kywch.github.io/CAST_jsPsych/choose-and-solve-task.html) to show how some individuals with math anxiety choose to avoid math and published my work in [*Science Advances* (Choe et al., 2019)](https://www.science.org/doi/10.1126/sciadv.aay1062). 
 

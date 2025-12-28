@@ -25,7 +25,7 @@ An effort-based decision-making task for measuring math avoidance. This task was
 
 ### RC-RAGE: Reactive Aggression Experiment
 
-**Retaliate or Carry-on: Reactive AGression Experiment** - An improved costly-reactive-aggression paradigm developed by [Meidenbauer, Choe, Bakkour, & Berman (2021)](https://psyarxiv.com/kw3by/).
+**Retaliate or Carry-on: Reactive AGression Experiment** - An improved costly-reactive-aggression paradigm developed by [Meidenbauer, Choe, Bakkour, Inzlicht, Meidenbauer, & Berman (2023)](https://link.springer.com/article/10.3758/s13428-023-02066-9).
 
 - [Try the demo](https://kywch.github.io/RC-RAGE_jsPsych/rc-rage-demo.html)
 

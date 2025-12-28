@@ -213,7 +213,9 @@ html, body {
 .project-thumbnail img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  object-position: center;
+  display: block;
 }
 
 .project-body {
@@ -418,7 +420,11 @@ article.post {
   }
 
   .project-card {
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 2 / 1; /* Wider card on mobile for better readability */
+  }
+
+  .project-thumbnail {
+    height: 60%; /* Increase thumbnail to 50% of card height */
   }
 
   .project-body {
@@ -426,12 +432,17 @@ article.post {
   }
 
   .project-title {
-    font-size: 1em;
+    font-size: 1.3em;
   }
 
   .project-description {
-    font-size: 0.8em;
-    -webkit-line-clamp: 2;
+    font-size: 1em;
+    -webkit-line-clamp: 3; /* Allow 3 lines since we have more space */
+  }
+
+  /* Hide button on mobile - entire card is clickable */
+  .project-link-btn {
+    display: none;
   }
 }
 
