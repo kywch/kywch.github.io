@@ -121,7 +121,7 @@ Overall, Tetris is easier because you're mostly reacting to the current piece an
 
 ## Try It Yourself
 
-Watch the agents play: [2048](/games/2048.html) | [Tetris](/games/tetris.html)
+Watch the agents play: [2048](/games/2048.html), [Tetris](/games/tetris.html)
 
 Code: [PufferLib](https://github.com/PufferAI/PufferLib)
 
