@@ -26,7 +26,7 @@ This file contains instructions for AI agents (Claude, GPT, etc.) to help mainta
 - **Scripts:** `assets/js/` (nav.js, blog.js)
 - **Images:** `images/`, `images/projects/`, `images/posts/`
 - **Data:** `_data/projects.yml`
-- **Agent Work Logs:** `logs/` (YYYY-MM-DD-description.md)
+- **Agent Work Logs:** `logs/` (NNN-description.md)
 
 **GitHub Pages Build:**
 - **Publishing Branch:** `master`
@@ -42,16 +42,28 @@ This file contains instructions for AI agents (Claude, GPT, etc.) to help mainta
 # NEVER commit directly to master for new features
 # ALWAYS use feature branches for WIP
 
+# IMPORTANT: Always start from master and sync with origin first
+git checkout master
+git pull origin master
+
+# Create new branch from updated master
 git checkout -b feature/descriptive-name
+
 # ... make changes ...
 git commit -m "Description"
 git push -u origin feature/descriptive-name
 
 # Only merge to master when ready to publish
 git checkout master
+git pull origin master  # Sync again before merging
 git merge feature/descriptive-name
 git push origin master
 ```
+
+**Critical Steps:**
+1. **Always create new branches from master** (not from other feature branches)
+2. **Always `git pull origin master`** before creating a new branch to sync with remote
+3. **Always sync master again** before merging to avoid conflicts
 
 **Exception:** Small fixes (typos, broken links) can go directly to master.
 
@@ -187,7 +199,7 @@ git push origin master
 7. **Images:** If adding images, save to `images/posts/YYYY-MM-DD-post-name/` directory
 8. Commit: `git commit -m "Add blog post: [Title]"`
 9. Push and ask user if they want to review before merging to master
-10. **Document work:** Create log file in `logs/YYYY-MM-DD-add-blog-post-title.md`
+10. **Document work:** Create log file in `logs/NNN-add-blog-post-title.md`
 
 **Example filename:** `_posts/2025-12-26-training-robots-with-mimicgen.md`
 
@@ -709,7 +721,7 @@ If you're a new AI agent helping with this site:
 8. **Follow the guidelines** above
 9. **Test before merging** to master
 10. **Be proactive** but not pushy
-11. **Document your work** in `logs/` directory
+11. **Document your work** in `logs/` directory with numbered logs
 
 ---
 
@@ -751,24 +763,35 @@ If multiple AI agents work on this site:
    - Append any issues, changes, notes during implementation. Do NOT rewrite the plan.
    - Keep it current as single source of truth
 
-3. **After completion:** Rename to dated log file
+3. **After completion:** Rename to numbered log file
    ```bash
-   mv logs/PLAN_AND_WIP.md logs/YYYY-MM-DD-brief-description.md
+   # Check existing logs to find next number
+   ls logs/
+   # Rename with next sequential number
+   mv logs/PLAN_AND_WIP.md logs/004-brief-description.md
    ```
    - This preserves the complete history in logs/
    - Makes room for the next planning session
+   - Date is preserved inside the file content
 
 **For simple tasks:** Create log file directly (see below)
 
 ### Log File Format
 
-**Location:** `logs/YYYY-MM-DD-brief-description.md`
+**Location:** `logs/NNN-brief-description.md`
+
+**Naming Convention:**
+- Use sequential numbers (001, 002, 003, etc.)
+- Include date **inside** the log file, not in filename
+- Use descriptive names for easy discovery
 
 **Filename examples:**
-- `logs/2025-12-26-initial-blog-setup.md`
-- `logs/2025-12-27-add-seo-features.md`
-- `logs/2026-01-15-update-featured-projects.md`
-- `logs/2025-12-27-add-wasm-games.md` (renamed from PLAN_AND_WIP.md)
+- `logs/001-create-planning-documentation.md`
+- `logs/002-blog-projects-implementation.md`
+- `logs/003-wasm-games-integration.md`
+- `logs/004-add-seo-features.md` (future example)
+
+**Finding next number:** Check `ls logs/` and use next sequential number
 
 **Template:**
 ```markdown
@@ -911,20 +934,22 @@ For small fixes that don't need full documentation:
 
 ```
 logs/
-├── 2025-12-26-initial-blog-setup.md
-├── 2025-12-27-add-seo-features.md
-├── 2026-01-15-update-featured-projects.md
-├── 2026-01-20-fix-broken-links.md
-└── README.md  # Index of all logs (optional)
+├── 001-create-planning-documentation.md
+├── 002-blog-projects-implementation.md
+├── 003-wasm-games-integration.md
+├── 004-curriculum-learning-post.md (future example)
+└── PLAN_AND_WIP.md  # Active planning file (rename to NNN-*.md when complete)
 ```
 
 **Best Practices:**
 - One log file per work session
-- Use descriptive filenames
+- Use sequential numbering (001, 002, etc.)
+- Use descriptive filenames for easy discovery
+- Include date **inside** the file, not in filename
 - Keep logs concise but informative
 - Include enough context for future agents
 - Update status if returning to WIP work
-- Cross-reference related logs
+- Cross-reference related logs by number
 
 **When to Create a Log:**
 - ✅ After any feature addition
