@@ -19,7 +19,7 @@
   featured_order: 2
 
 - title: "Super 2048 Agent"
-  thumbnail: "/images/projects/2048_thumbnail.png"
+  thumbnail: "/images/posts/2048_65k.png"
   description: "Running on your browser"
   blog_post: "/blog/2025/12/curriculum-learning-2048-tetris/"
   github: "https://github.com/PufferAI/PufferLib"
