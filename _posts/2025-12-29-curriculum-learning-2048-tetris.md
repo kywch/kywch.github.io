@@ -128,3 +128,10 @@ Code: [PufferLib](https://github.com/PufferAI/PufferLib)
 Training commands: After installing PufferLib, run `puffer train puffer_g2048` or `puffer train puffer_tetris`
 
 These results show that a single person with a gaming desktop can achieve much more than you'd think. Also, if you're considering scaling up, think again. Having many CPUs and GPUs to throw at a problem is nice, but it's much more fun squeezing the last drop of perf out (but yeah, I also saw Sutton's [The Bitter Lesson](http://www.incompleteideas.net/IncIdeas/BitterLesson.html)).
+
+
+## HN & HNY Update
+
+This post was briefly trending on HackerNews on the last day of 2025. What a way to wrap up the year. Happy New Year everyone!
+
+![HackerNews upate](/images/posts/2048_hn_update.png)
