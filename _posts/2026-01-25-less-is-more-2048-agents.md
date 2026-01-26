@@ -58,9 +58,9 @@ if (row[i] <= 6) {
 
 This performed much better. It provided a cleaner and stronger incentive for merges, much better aligned with the goal of reaching higher tiles.
 
-![Simplified 2048 Agent](/images/posts/simple_2048.png)
-
 ## The Results
+
+![Simplified 2048 Agent](/images/posts/simple_2048.png)
 
 | Metric | Original | Simplified |
 |--------|----------|------------|
@@ -71,12 +71,6 @@ This performed much better. It provided a cleaner and stronger incentive for mer
 | Reward components | 6+ with complex heuristics | 3 simple components |
 
 Training curves: [Run 1](https://wandb.ai/kywch/pufferlib/runs/1v5kls7l), [Run 2](https://wandb.ai/kywch/pufferlib/runs/v0yym0pu)
-
-Best evaluation (95k episodes):
-```
-Reached 32768 prob: 84.88 %
-Reached 65536 prob: 33.96 %
-```
 
 Also observed 65k in 10 out of 10 runs with different seeds. Ready for benchmarking!
 
