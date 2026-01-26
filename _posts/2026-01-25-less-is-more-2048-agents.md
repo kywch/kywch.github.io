@@ -23,7 +23,7 @@ A sign of this brittle path: I was only able to reach 65k 3 out of 10 times befo
 
 ## Inspiration from drubinstein
 
-While I was taking a break, [drubinstein](https://github.com/drubinstein) had been simplifying the 2048 observation space and network. He didn't like the complex obs and heuristics so much, so he spent his weekends to make his point. His approach: no elaborate one-hot observations, just the grid with tile values, then use value and position embedding networks to encode the grid. No heuristic rewards, no complex curriculum. And he showed this simple setup could reach 65k.
+While I was taking a break, [drubinstein](https://github.com/drubinstein) (check out his awesome work on pokemon + RL [here](https://drubinstein.github.io/pokerl/)) had been simplifying the 2048 observation space and network. He didn't like the complex obs and heuristics so much, so he spent his weekends to make his point. His approach: no elaborate one-hot observations, just the grid with tile values, then use value and position embedding networks to encode the grid. No heuristic rewards, no complex curriculum. And he showed this simple setup could reach 65k.
 
 His results made me think that the main reason I achieved the 65k tile was the capable network I ended up using. And maybe when the network is capable enough, it can just learn with fewer heuristics? I had ended up where I was because I started from a less capable network, and by adding heuristics, I could see gains. However, agents might have succeeded *despite* the heuristics, not because of them.
 
@@ -78,6 +78,8 @@ This performed much better. It provided a cleaner and stronger incentive for mer
 Training curves: [Run 1](https://wandb.ai/kywch/pufferlib/runs/1v5kls7l), [Run 2](https://wandb.ai/kywch/pufferlib/runs/v0yym0pu)
 
 Also observed 65k in 10 out of 10 runs with different seeds. Ready for benchmarking!
+
+![10 wandb runs](/images/posts/s2048_10_runs.png)
 
 ## Lessons Learned
 
