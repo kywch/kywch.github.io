@@ -132,6 +132,10 @@ These results show that a single person with a gaming desktop can achieve much m
 
 ## HN & HNY Update
 
-This post was briefly trending on HackerNews on the last day of 2025. What a way to wrap up the year. Happy New Year everyone!
+This post was briefly trending on [HackerNews on the last day of 2025](https://news.ycombinator.com/front?day=2025-12-31). What a way to wrap up the year. Happy New Year everyone!
 
 ![HackerNews upate](/images/posts/2048_hn_update.png)
+
+## Update: Less is More
+
+Another lucky bug?!! Fixing one revealed that my snake pattern heuristics were actually holding back performance. After simplifying, the agent reaches 65k at a **33.96%** rate, up from 14.75%. Read more in [Less is More: When Agents Learn Not Because But Despite My Doings](/blog/2026/01/less-is-more-2048-agents/).
