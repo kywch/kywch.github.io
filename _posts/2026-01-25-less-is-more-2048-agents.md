@@ -37,7 +37,7 @@ Well, I needed 2048 to work again. I also did not like the complex obs and compl
 
 **Curriculum**: Removed endgame-only environments (they relied on snake patterns). Simplified scaffolding: previously it placed high tiles in the top-left in sorted order to help agents build toward the snake pattern. With snake rewards gone, this was too biased, so now it places up to two large tiles randomly. A planned sweep on the proportion of scaffolding episodes will show how useful it actually is.
 
-**The Key Breakthrough, Merge Reward Scaling**: The reward should reflect the actual difficulty. Reaching the 32k tile takes ~16,000 moves; reaching the 1024 tile takes ~500 moves. But previously, merge rewards scaled linearly with exponent, so merging 32k tiles gave only 50% more reward than 1024 tiles. Not nearly enough signal for the critical merges. I changed to power-1.5 scaling plus a small base. Even power-1.5 doesn't fully match the difficulty curve, but it's much better than linear:
+**The Key Breakthrough, Merge Reward Scaling**: The reward should reflect the actual difficulty. Reaching the 32k tile takes ~16,000 moves; reaching the 1024 tile takes ~500 moves. But previously, merge rewards scaled linearly with exponent, so merging 32k tiles gave only 50% more reward than 1024 tiles. Not nearly enough signal for the critical merges. I changed to power-1.5 scaling plus a small base. Even power-1.5 doesn't fully match the difficulty curve, but it's much better than linear (from [g2048.h](https://github.com/kywch/PufferLib/blob/simple-2048/pufferlib/ocean/g2048/g2048.h)):
 
 ```c
 #define MERGE_BASE_REWARD 0.05f
@@ -57,6 +57,11 @@ if (row[i] <= 6) {
 ```
 
 This performed much better. It provided a cleaner and stronger incentive for merges, much better aligned with the goal of reaching higher tiles.
+
+**The 3 Simple Reward Components**: The simplified reward system consists of just three components. The invalid move and game over penalties were already there; only the merge reward scaling was tweaked:
+1. **Merge reward** (positive): Power-1.5 scaling as shown above, rewarding tile merges with emphasis on higher tiles
+2. **Invalid move penalty** (negative): A small penalty when the agent attempts a move that doesn't change the board state
+3. **Game over penalty** (negative): A penalty when the game ends, encouraging the agent to keep the game going longer
 
 ## The Results
 
@@ -86,6 +91,6 @@ Don't overestimate intuition, don't underestimate computation.
 
 Watch the agents play: [Simplified 2048](/games/2048.html), [Snake Pattern 2048](/games/2048_snake.html)
 
-Code: https://github.com/kywch/PufferLib/tree/simple-2048
+Code: [github.com/kywch/PufferLib/tree/simple-2048](https://github.com/kywch/PufferLib/tree/simple-2048)
 
 [PR #474](https://github.com/PufferAI/PufferLib/pull/474) was merged into PufferLib 4.0, which is being actively developed now.
