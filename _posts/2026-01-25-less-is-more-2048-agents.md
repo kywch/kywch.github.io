@@ -31,7 +31,7 @@ His results made me think that the main reason I achieved the 65k tile was the c
 
 Well, I needed 2048 to work again. I also did not like the complex obs and complex rewards. It was an excellent opportunity to make it clean, so I started simplifying all I could.
 
-**Observation & Network**: Adopted drubinstein's approach. Before: 16 positions × 17 tile values as one-hot vectors (272 features). After: just 16 grid values with learned embeddings.
+**Observation & Network**: Adopted drubinstein's approach. Before: 16 positions × 17 tile values as one-hot vectors + a one-hot indicator for snake pattern match (272 + 1 features). After: just 16 grid values with learned embeddings.
 
 **Heuristic Rewards**: Removed corner placement and monotonicity rewards for top/left -> bottom/right sorting and snake pattern bonuses entirely.
 
