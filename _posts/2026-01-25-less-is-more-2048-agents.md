@@ -21,9 +21,9 @@ The snake pattern was not a naturally arising strategy. It needed luck and compl
 
 A sign of this brittle path: I was only able to reach 65k 3 out of 10 times before. But I was so happy and exhausted to even achieve the 65k tile, so I took a break from 2048.
 
-## Inspiration from drubinstein
+## Inspiration from David Rubinstein 
 
-While I was taking a break, [drubinstein](https://github.com/drubinstein) (check out his awesome work on solving Pokemon with RL [here](https://drubinstein.github.io/pokerl/)) had been simplifying the 2048 observation space and network. He didn't like the complex obs and heuristics so much, so he spent his weekends to make his point. His approach: no elaborate one-hot observations, just the grid with tile values, then use value and position embedding networks to encode the grid. No heuristic rewards, no complex curriculum. And he showed this simple setup could reach 65k.
+While I was taking a break, [David Rubinstein](https://github.com/drubinstein) (check out his awesome work on solving Pokemon with RL [here](https://drubinstein.github.io/pokerl/)) had been simplifying the 2048 observation space and network. He didn't like the complex obs and heuristics so much, so he spent his weekends to make his point. His approach: no elaborate one-hot observations, just the grid with tile values, then use value and position embedding networks to encode the grid. No heuristic rewards, no complex curriculum. And he showed this simple setup could reach 65k.
 
 His results made me think that the main reason I achieved the 65k tile was the capable network I ended up using. And maybe when the network is capable enough, it can just learn with fewer heuristics? I had ended up where I was because I started from a less capable network, and by adding heuristics, I could see gains. However, agents might have succeeded *despite* the heuristics, not because of them.
 
@@ -31,7 +31,7 @@ His results made me think that the main reason I achieved the 65k tile was the c
 
 Well, I needed 2048 to work again. I also did not like the complex obs and complex rewards. It was an excellent opportunity to make it clean, so I started simplifying all I could.
 
-**Observation & Network**: Adopted drubinstein's approach. Before: 16 positions × 17 tile values as one-hot vectors + a one-hot indicator for snake pattern match (272 + 1 features). After: just 16 grid values with learned embeddings.
+**Observation & Network**: Adopted David's approach. Before: 16 positions × 17 tile values as one-hot vectors + a one-hot indicator for snake pattern match (272 + 1 features). After: just 16 grid values with learned embeddings.
 
 **Heuristic Rewards**: Removed corner placement and monotonicity rewards for top/left -> bottom/right sorting and snake pattern bonuses entirely.
 
