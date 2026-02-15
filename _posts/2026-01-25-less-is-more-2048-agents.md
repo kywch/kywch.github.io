@@ -83,7 +83,7 @@ Also observed 65k in 10 out of 10 runs with different seeds. Ready for benchmark
 
 ## Lessons Learned
 
-**The Bitter Lesson, again.** Heuristics might help short-term, but capable agents will just learn from diverse experience. The intuitions I had built up were partly wrong. The snake pattern was easier for me to understand, but it limited performance. Agents trained with simple rewards perform complex tricks I never would have thought of, and they do much better. See for yourself [here](/games/2048.html).
+**The Bitter Lesson, again.** Heuristics might help short-term, but capable agents will just learn from diverse experience. The intuitions I had built up were partly wrong. The snake pattern was easier for me to understand, but it limited performance. Agents trained with simple rewards perform complex tricks I never would have thought of, and they do much better. See for yourself [here](https://zen2048.com/).
 
 Don't overestimate intuition, don't underestimate computation.
 
@@ -91,7 +91,7 @@ Don't overestimate intuition, don't underestimate computation.
 
 ## Try It
 
-Watch the agents play: [Simplified 2048](/games/2048.html), [Snake Pattern 2048](/games/2048_snake.html)
+Watch the agents play: [Simplified 2048](https://zen2048.com/), [Snake Pattern 2048](https://zen2048.com/snake.html)
 
 Code: [github.com/kywch/PufferLib/tree/simple-2048](https://github.com/kywch/PufferLib/tree/simple-2048)
 

@@ -35,7 +35,7 @@ Sweep methodology: I ran 200 sweeps, starting broad and narrowing to fine-tune. 
 
 The previous state-of-the-art search solution uses a few terabytes of endgame tables to reach the 32,768 tile reliably and the 65,536 tile at an 8.4% rate ([repo](https://github.com/game-difficulty/2048EndgameTablebase)).
 
-My 15MB policy achieved a 14.75% 65k tile rate and a 71.22% 32k tile rate (115k episodes). Here is the [training log](https://wandb.ai/kywch/pufferlib/runs/5thsjr61?nw=nwuserkywch). You can play it in your browser [here](/games/2048.html).
+My 15MB policy achieved a 14.75% 65k tile rate and a 71.22% 32k tile rate (115k episodes). Here is the [training log](https://wandb.ai/kywch/pufferlib/runs/5thsjr61?nw=nwuserkywch). You can play it in your browser [here](https://zen2048.com/).
 
 ![2048 Agent reaching 65k tile](/images/posts/2048_65k.png)
 
@@ -121,7 +121,7 @@ Overall, Tetris is easier because you're mostly reacting to the current piece an
 
 ## Try It Yourself
 
-Watch the agents play: [2048](/games/2048.html), [Tetris](/games/tetris.html)
+Watch the agents play: [2048](https://zen2048.com/), [Tetris](/games/tetris.html)
 
 Code: [PufferLib](https://github.com/PufferAI/PufferLib)
 
